@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">ViewPager</string>
+    <string name="state_capital">Λιανική Τιμή Φαρμάκου:</string>
+    <string name="erotimatologio">Questionaire</string>
+
+    <string-array name="deutera">
+        <item>.00</item>
+        <item>25</item>
+        <item>10</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="trita">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+
+    </string-array>
+
+    <string name="textInfo">Βαθμολογείστε σε μία κλίμακα από το 1 μέχρι το 3 τι πιστεύετε ότι σας αφορά σχετικά με τα συμπτώματα που αναφέρονται πιο κάτω. Αν τα συμπτώματα είναι σπάνια (λιγότερο από 2-3 φορές το μήνα) βαθμολογείστε με 1. Αν πιο συχνά και πιο έντονα βαθμολογείστε με 2. Αν σχεδόν καθημερινά και πολύ έντονα βαθμολογείστε με 3. Ο Ορθομοριακός Διατροφικός Ιατρός σας θα αξιολογήσει την βαθμολογία και θα σας συστήσει το Ορθομοριακό Διατροφικό Πρόγραμμα που χρειάζεστε. Παρακαλούμε υπογραμμίστε το σύμπτωμα που σας αφορά.</string>
+</resources>

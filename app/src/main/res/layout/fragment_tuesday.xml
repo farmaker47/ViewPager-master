@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrolara"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/relative3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/view_edit_header_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="ΠΡΩΤΟ  ΦΑΡΜΑΚΟ"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativeproto"
+                style="@style/view_edit_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView">
+
+                <!-- Note: android:inputType is not supported in Android 1.5 -->
+                <AutoCompleteTextView
+                    android:id="@+id/state_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:completionThreshold="1"
+                    android:drawableLeft="@drawable/abc_ic_search_api_mtrl_alpha"
+                    android:dropDownHeight="150dp"
+                    android:hint="Πληκτρολογήστε δραστική ουσία:"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_below="@+id/state_name"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="6dp"
+                    android:text="@string/state_capital"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/state_capital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/Perigrafiview"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/state_name"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Τιμή Αναφοράς: "
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/desciptionperigrafi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/Perigrafiview"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/spinner2"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/posostotext" />
+
+                <TextView
+                    android:id="@+id/posostotext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/posotitatext"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Ποσοστό Συμμετοχής:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/desciptionperigrafi"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/posotitatext" />
+
+                <TextView
+                    android:id="@+id/posotitatext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/state_capital"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Ποσότητα φαρμάκων:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/euro$"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/spinner1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_toRightOf="@+id/simetoxi"
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/simetoxi"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/posostotext"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Συμμετοχή σε ευρώ:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <ImageButton
+                    android:id="@+id/but11x"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignEnd="@+id/relativeproto"
+                    android:layout_alignRight="@+id/relativeproto"
+                    android:layout_below="@+id/textView"
+                    android:layout_toRightOf="@+id/state_name"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="but11xclick"
+                    android:src="@drawable/abc_ic_clear_mtrl_alpha" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/farmako2"
+                style="@style/view_edit_header_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image21"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="ΔΕΥΤΕΡΟ  ΦΑΡΜΑΚΟ"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativedeftero"
+                style="@style/view_edit_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/farmako2">
+
+                <!-- Note: android:inputType is not supported in Android 1.5 -->
+                <AutoCompleteTextView
+                    android:id="@+id/autofarmako2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/farmako2"
+                    android:layout_centerHorizontal="true"
+                    android:completionThreshold="1"
+                    android:drawableLeft="@drawable/abc_ic_search_api_mtrl_alpha"
+                    android:dropDownHeight="150dp"
+                    android:hint="Πληκτρολογήστε δραστική ουσία:"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/lianiki2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_below="@+id/autofarmako2"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="6dp"
+                    android:text="@string/state_capital"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/lianikitimi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/lianiki2"
+                    android:layout_marginLeft="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/anafora2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/autofarmako2"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Τιμή Αναφοράς: "
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/anaforatimi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/anafora2"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/spinner4"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/pososto2" />
+
+                <TextView
+                    android:id="@+id/pososto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/posotita2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Ποσοστό Συμμετοχής:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/anaforatimi2"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/posotita2" />
+
+                <TextView
+                    android:id="@+id/posotita2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/lianikitimi2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Ποσότητα φαρμάκων:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/euro2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/spinner3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_toRightOf="@+id/simetoxi2"
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/simetoxi2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pososto2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Συμμετοχή σε ευρώ:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <ImageButton
+                    android:id="@+id/but12x"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/farmako2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/autofarmako2"
+                    android:background="#ff33b5e5"
+                    android:onClick="but12xclick"
+                    android:src="@drawable/abc_ic_clear_mtrl_alpha" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/farmako3"
+                style="@style/view_edit_header_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image22"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="ΤΡΙΤΟ  ΦΑΡΜΑΚΟ"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relativetrito"
+                style="@style/view_edit_for_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/farmako3">
+
+                <!-- Note: android:inputType is not supported in Android 1.5 -->
+                <AutoCompleteTextView
+                    android:id="@+id/autofarmako3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/farmako3"
+                    android:layout_centerHorizontal="true"
+                    android:completionThreshold="1"
+                    android:drawableLeft="@drawable/abc_ic_search_api_mtrl_alpha"
+                    android:dropDownHeight="150dp"
+                    android:hint="Πληκτρολογήστε δραστική ουσία:"
+                    android:inputType="textMultiLine"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/lianiki3"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_below="@+id/autofarmako3"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="6dp"
+                    android:text="@string/state_capital"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/lianikitimi3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/lianiki3"
+                    android:layout_marginLeft="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/anafora3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/autofarmako3"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Τιμή Αναφοράς: "
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/anaforatimi3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/anafora3"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="60dp"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/spinner6"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/pososto3" />
+
+                <TextView
+                    android:id="@+id/pososto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/posotita3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Ποσοστό Συμμετοχής:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="73dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/anaforatimi3"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/posotita3" />
+
+                <TextView
+                    android:id="@+id/posotita3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/lianikitimi3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Ποσότητα φαρμάκων:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/euro3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/spinner5"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_toRightOf="@+id/simetoxi3"
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/simetoxi3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pososto3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Συμμετοχή σε ευρώ:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <ImageButton
+                    android:id="@+id/but13x"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/farmako3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/autofarmako3"
+                    android:background="#ff33b5e5"
+                    android:onClick="but13xclick"
+                    android:src="@drawable/abc_ic_clear_mtrl_alpha" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sinolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativetrito"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:paddingTop="10dp"
+                android:text="Σύνολο με επιβάρυνση 1€ ="
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/sinololefta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sinolo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="2dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#030303"
+                android:textSize="40dp" />
+
+            <ImageView
+                android:id="@+id/image21"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_below="@+id/relativeproto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/piil7" />
+
+            <ImageView
+                android:id="@+id/image22"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_below="@+id/relativedeftero"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/piil7" />
+
+            <Button
+                android:id="@+id/pdfix"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/sinololefta"
+                android:layout_marginTop="10dp"
+                android:onClick="pdfixda"
+                android:text="Συνταγή σε  PDF" />
+
+            <Button
+                android:id="@+id/pdfixs"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sinololefta"
+                android:layout_marginTop="10dp"
+                android:onClick="pdfixdas"
+                android:text="Δείτε το  PDF" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
