@@ -17,25 +17,43 @@
 package com.example.android.viewpager;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.OverScroller;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.github.ksoichiro.android.observablescrollview.CacheFragmentStatePagerAdapter;
@@ -45,16 +63,27 @@ import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 import com.github.ksoichiro.android.observablescrollview.Scrollable;
 import com.github.ksoichiro.android.observablescrollview.TouchInterceptionFrameLayout;
 import com.google.samples.apps.iosched.ui.widget.SlidingTabLayout;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.pdf.BaseField;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.nineoldandroids.view.ViewHelper;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * <p>This uses TouchInterceptionFrameLayout to move Fragments.</p>
- *
+ * <p>
  * <p>There is an unsolved problem: it doesn't scroll smoothly
  * when the flexible space is changing.<br>
  * If it's a big problem to you, please also check
  * FlexibleSpaceWithImageWithViewPagerTabActivity.</p>
- *
+ * <p>
  * <p>SlidingTabLayout and SlidingTabStrip are from google/iosched:<br>
  * https://github.com/google/iosched</p>
  */
@@ -62,6 +91,12 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
     private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
     private static final int INVALID_POINTER = -1;
+    private static final String NUMBER_OF_RECEIVER = "pdfCreating";
+    private BroadcastReceiver mBroadcastReceiver;
+    private IntentFilter mFilter;
+    private static final int MAIN_LOADER = 477;
+    private LinearLayout def,def2,def3;
+
 
     private View mImageView;
     private View mOverlayView;
@@ -129,12 +164,29 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                 // because it causes lagging.
                 // See #87: https://github.com/ksoichiro/Android-ObservableScrollView/issues/87
                 FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) mInterceptionLayout.getLayoutParams();
-                lp.height = getScreenHeight() + mFlexibleSpaceHeight;
+                lp.height = getScreenHeight() + mFlexibleSpaceHeight /*+mFlexibleSpaceHeight*85/100*/;
                 mInterceptionLayout.requestLayout();
 
                 updateFlexibleSpace();
             }
         });
+
+        mBroadcastReceiver = new broadcastReceived();
+        mFilter = new IntentFilter();
+        mFilter.addAction(NUMBER_OF_RECEIVER);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(mBroadcastReceiver);
+        getSupportLoaderManager().destroyLoader(MAIN_LOADER);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(mBroadcastReceiver,mFilter);
     }
 
     protected int getScreenHeight() {
@@ -342,7 +394,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                     f = new WednesdayFragment();
                     break;
                 case 2:
-                    f = new TuesdayFragment();
+                    f = new ThursdayFragment();
                     break;
                 default:
                     f = new WednesdayFragment();
@@ -360,5 +412,176 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         public CharSequence getPageTitle(int position) {
             return TITLES[position];
         }
+    }
+
+    public class broadcastReceived extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String actionGet = intent.getAction();
+            if(actionGet.equals(NUMBER_OF_RECEIVER)){
+                LoaderManager loaderManager = getSupportLoaderManager();
+                Loader<String> githubSearchLoader = loaderManager.getLoader(MAIN_LOADER);
+                if (githubSearchLoader == null) {
+                    loaderManager.initLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                } else {
+                    loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                }
+                Log.e("Intent","Received");
+            }
+        }
+    }
+    private LoaderManager.LoaderCallbacks mLoaderToCreatePdf = new LoaderManager.LoaderCallbacks<Bitmap>() {
+
+        @Override
+        public Loader<Bitmap> onCreateLoader(int id, Bundle args) {
+            return new AsyncTaskLoader<Bitmap>(FlexibleSpaceWithImageWithViewPagerTab2Activity.this) {
+
+                Document doc = new Document();
+                Bitmap combinedBitmap;
+
+                @Override
+                protected void onStartLoading() {
+
+                    forceLoad();
+                }
+
+                @Override
+                public Bitmap loadInBackground() {
+                    try {
+
+                        String path = Environment.getExternalStorageDirectory()
+                                .getAbsolutePath() + "/EuZin";
+
+                        File dir = new File(path);
+                        if (!dir.exists())
+                            dir.mkdirs();
+
+                        File file = new File(dir, "EuZin.pdf");
+                        FileOutputStream fOut = new FileOutputStream(file, false);
+
+                        PdfWriter.getInstance(doc, fOut);
+
+                        def = (LinearLayout) findViewById(R.id.linearInfo);
+                        def2 = (LinearLayout) findViewById(R.id.linearYgeia);
+                        def3 = (LinearLayout) findViewById(R.id.linearProsopikes);
+
+                        def.getRootView();
+                        def.setDrawingCacheEnabled(true);
+
+                        def2.getRootView();
+                        def2.setDrawingCacheEnabled(true);
+
+                        def3.getRootView();
+                        def3.setDrawingCacheEnabled(true);
+
+                        Bitmap bitmap, bitmap2, bitmap3;
+
+                        bitmap = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
+                        bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
+                        bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
+
+                        Canvas c = new Canvas(bitmap);
+                        c.drawColor(Color.LTGRAY);
+                        def.draw(c);
+
+                        Canvas c2 = new Canvas(bitmap2);
+                        c2.drawColor(Color.LTGRAY);
+                        def2.draw(c2);
+
+                        Canvas c3 = new Canvas(bitmap3);
+                        c3.drawColor(Color.LTGRAY);
+                        def3.draw(c3);
+
+                        ArrayList<Bitmap> a = new ArrayList<Bitmap>();
+                        a.add(bitmap2);
+                        a.add(bitmap);
+                        a.add(bitmap3);
+                        combinedBitmap = combineImageIntoOneFlex(a);
+                        Log.e("CombinedImage", "OK");
+
+                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+
+                        combinedBitmap.compress(Bitmap.CompressFormat.JPEG, 10, stream);
+                        Log.e("Compress", "OK");
+                        Image myImg = Image.getInstance(stream.toByteArray());
+                        Log.e("StreamToByte", "OK");
+
+                        doc.open();
+
+                        if (myImg.getWidth() >= doc.getPageSize().getWidth() || myImg.getHeight() >= doc.getPageSize().getHeight()) {
+                            myImg.scaleToFit(doc.getPageSize());
+                        }
+                        myImg.setAbsolutePosition((doc.getPageSize().getWidth() - myImg.getScaledWidth()) / BaseField.BORDER_WIDTH_MEDIUM, (doc.getPageSize().getHeight() - myImg.getScaledHeight()) / BaseField.BORDER_WIDTH_MEDIUM);
+
+                        myImg.setAlignment(Image.ALIGN_CENTER);
+
+                        // add image to document
+                        doc.add(myImg);
+
+
+                        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+                        doc.close();
+                        return combinedBitmap;
+
+                    } catch (DocumentException e) {
+                        e.printStackTrace();
+                        return null;
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        return null;
+                    } finally {
+
+                    }
+                }
+            };
+        }
+
+        @Override
+        public void onLoadFinished(Loader<Bitmap> loader, Bitmap data) {
+            Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, "Η Συνταγή αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin", Toast.LENGTH_LONG).show();
+
+            InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+            Intent email = new Intent(Intent.ACTION_SEND);
+            email.putExtra(Intent.EXTRA_EMAIL, "receiver_email_address");
+            email.putExtra(Intent.EXTRA_SUBJECT, "subject");
+            email.putExtra(Intent.EXTRA_TEXT, "email body");
+            Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
+                    .getAbsolutePath() + "/EuZin",  "EuZin.pdf"));
+            email.putExtra(Intent.EXTRA_STREAM, uri);
+            email.setType("application/pdf");
+            email.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(email);
+        }
+
+        @Override
+        public void onLoaderReset(Loader<Bitmap> loader) {
+
+        }
+    };
+
+    private Bitmap combineImageIntoOneFlex(ArrayList<Bitmap> bitmap) {
+        int w = 0, h = 0;
+        for (int i = 0; i < bitmap.size(); i++) {
+            if (i < bitmap.size() - 1) {
+                w = bitmap.get(i).getWidth() > bitmap.get(i + 1).getWidth() ? bitmap.get(i).getWidth() : bitmap.get(i + 1).getWidth();
+            }
+            h += bitmap.get(i).getHeight();
+        }
+
+        Bitmap temp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(temp);
+        int top = 0;
+        for (int i = 0; i < bitmap.size(); i++) {
+            Log.d("HTML", "Combine: " + i + "/" + bitmap.size() + 1);
+
+            top = (i == 0 ? 0 : top + bitmap.get(i).getHeight());
+            canvas.drawBitmap(bitmap.get(i), 0f, top, null);
+        }
+        return temp;
     }
 }

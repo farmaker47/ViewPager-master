@@ -41,6 +41,14 @@
         <item name="android:layout_marginRight">5.0dip</item>
         <item name="android:layout_marginBottom">5.0dip</item>
     </style>
+    <style name="view_edit_for_item_stoixeia">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/view_edit_item_stoixeia</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:layout_marginBottom">5.0dip</item>
+    </style>
 
     <style name="view_edit_for_item">
         <item name="android:orientation">vertical</item>

@@ -33,7 +33,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
-        <activity android:name=".FlexibleSpaceWithImageWithViewPagerTab2Activity"/>
+        <activity android:name=".FlexibleSpaceWithImageWithViewPagerTab2Activity"
+            android:windowSoftInputMode="adjustPan"/>
 
         <!--<service android:name=".ServiceForPdf"
             android:exported="false"/>-->

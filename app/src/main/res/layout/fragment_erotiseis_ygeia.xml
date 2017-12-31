@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="4dp"
+            android:layout_marginLeft="3dp"
             android:text="@string/textInfo"
             android:textAlignment="textStart"
             android:textColor="@color/icons" />
@@ -324,6 +325,12 @@
 
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/primaryEu">
+        </View>
 
     </LinearLayout>
 </ScrollView>
