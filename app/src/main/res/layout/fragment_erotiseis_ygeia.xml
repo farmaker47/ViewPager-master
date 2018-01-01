@@ -26,8 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:padding="4dp"
             android:layout_marginLeft="3dp"
+            android:padding="4dp"
             android:text="@string/textInfo"
             android:textAlignment="textStart"
             android:textColor="@color/icons" />
@@ -62,35 +62,36 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="1.  "
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="Πόνοι αρθρώσεων, πόνοι μυών, κράμπες, δυσκαμψία κινήσεων"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="Πόνοι αρθρώσεων, πόνοι μυών, κράμπες, δυσκαμψία κινήσεων" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:id="@+id/ratingBarInInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
 
 
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -98,31 +99,33 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="2.  "
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="Έκζεμα, ψωρίαση, δερματοπάθειες γενικά"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="Έκζεμα, ψωρίαση, δερματοπάθειες γενικά" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -130,34 +133,35 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="3.  "
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="Φαγούρα, εξανθήματα, ξηροδερμία"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="Φαγούρα, εξανθήματα, ξηροδερμία" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
 
 
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -165,37 +169,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="4.  "
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="Άσθμα, βρογχίτιδα"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="Άσθμα, βρογχίτιδα" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
-
 
 
             </LinearLayout>
 
 
         </LinearLayout>
+
         <TextView
             style="@style/view_edit_header_for_item"
             android:layout_width="match_parent"
@@ -209,6 +214,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#ffffff"
             android:textSize="24sp" />
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/view_edit_for_item_onoma"
             android:layout_width="match_parent"
@@ -223,27 +229,28 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="1. Διαρροϊκό σύνδρομο, δυσκοιλιότητα, σπαστική κολίτιδα"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="1. Διαρροϊκό σύνδρομο, δυσκοιλιότητα, σπαστική κολίτιδα" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
 
 
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -251,24 +258,26 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="2. Ξινίλες ή καούρες, φουσκώματα, αέρια"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="2. Ξινίλες ή καούρες, φουσκώματα, αέρια" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -276,24 +285,26 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="3. Άσχημη αναπνοή"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="3. Άσχημη αναπνοή" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -301,24 +312,24 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="4. Έχετε συχνά στομαχικές διαταραχές"
-                    android:layout_gravity="center_vertical"/>
+                    android:text="4. Έχετε συχνά στομαχικές διαταραχές" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:numStars="3"
-                        android:stepSize="1"
-                        android:progressDrawable="@drawable/ratingbar_custom" />
+                        android:progressDrawable="@drawable/ratingbar_custom"
+                        android:stepSize="1" />
 
                 </LinearLayout>
-
 
 
             </LinearLayout>
@@ -326,11 +337,36 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonYgeiaBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="1"
+                android:text="ΠΡΟΗΓΟΥΜΕΝΟ" />
+
+            <Button
+                android:id="@+id/buttonYgeiaNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="7dp"
+                android:layout_weight="1"
+                android:text="ΕΠΟΜΕΝΟ" />
+
+        </LinearLayout>
+
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/primaryEu">
-        </View>
+            android:background="@color/primaryEu"></View>
 
     </LinearLayout>
 </ScrollView>

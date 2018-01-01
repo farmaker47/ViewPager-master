@@ -15,19 +15,43 @@
  */
 package com.example.android.viewpager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * Fragment that displays "Tuesday".
  */
 public class TuesdayFragment extends Fragment {
 
+    private Button mButtonGenikes;
+    private View mFragmentGenikes;
+    private static final String NUMBER_OF_RECEIVER_NEXT = "nextPage";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_erotiseis_genikes, container, false);
+        mFragmentGenikes=inflater.inflate(R.layout.fragment_erotiseis_genikes, container, false);
+        mButtonGenikes = (Button)mFragmentGenikes.findViewById(R.id.buttonGenikes);
+        mButtonGenikes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toSendSignal();
+            }
+        });
+
+
+        return mFragmentGenikes;
+    }
+
+    private void toSendSignal() {
+        Intent intent = new Intent();
+        intent.setAction(NUMBER_OF_RECEIVER_NEXT);
+        getActivity().sendBroadcast(intent);
+
     }
 }

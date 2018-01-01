@@ -49,4 +49,15 @@
     </string-array>
 
     <string name="textInfo">Βαθμολογείστε σε μία κλίμακα από το 1 μέχρι το 3 τι πιστεύετε ότι σας αφορά σχετικά με τα συμπτώματα που αναφέρονται πιο κάτω. Αν τα συμπτώματα είναι σπάνια (λιγότερο από 2-3 φορές το μήνα) βαθμολογείστε με 1. Αν πιο συχνά και πιο έντονα βαθμολογείστε με 2. Αν σχεδόν καθημερινά και πολύ έντονα βαθμολογείστε με 3. Ο Ορθομοριακός Διατροφικός Ιατρός σας θα αξιολογήσει την βαθμολογία και θα σας συστήσει το Ορθομοριακό Διατροφικό Πρόγραμμα που χρειάζεστε. Παρακαλούμε υπογραμμίστε το σύμπτωμα που σας αφορά.</string>
+    <string name="emailSubject">Ερωτηματολόγιο ΕυΖήν</string>
+    <string name="title_activity_eu_zin_drawer">EuZinDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="drawerEpikefalis">Ευ Ζήν</string>
+    <string name="epikoinonia">Επικοινωνία</string>
+    <string name="topothesia">Τοποθεσία</string>
+    <string name="emailGeniko">Ευ Ζην εφαρμογή android</string>
 </resources>

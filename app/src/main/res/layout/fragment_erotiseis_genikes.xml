@@ -224,6 +224,15 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/buttonGenikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ΕΠΟΜΕΝΟ"
+            android:layout_gravity="end"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="10dp"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"

@@ -23,8 +23,9 @@ public class ThursdayFragment extends Fragment {
 
     private TextView imerominia;
     private View mThursdayFragmentView;
-    private Button mButtonApostoli;
+    private Button mButtonApostoli,mButttonBack;
     private static final String NUMBER_OF_RECEIVER = "pdfCreating";
+    private static final String NUMBER_OF_RECEIVER_MIDDLE_BACK = "middleBack";
 
     @Nullable
     @Override
@@ -32,10 +33,17 @@ public class ThursdayFragment extends Fragment {
         mThursdayFragmentView = inflater.inflate(R.layout.fragment_erotiseis_prosopikes, container, false);
         imerominia = (TextView) mThursdayFragmentView.findViewById(R.id.imerominiaTextDisplay);
         mButtonApostoli = (Button) mThursdayFragmentView.findViewById(R.id.apostoli);
+        mButttonBack = (Button)mThursdayFragmentView.findViewById(R.id.backTooMain);
         mButtonApostoli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toSendSignal();
+            }
+        });
+        mButttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toMiddleSignal();
             }
         });
 
@@ -52,6 +60,13 @@ public class ThursdayFragment extends Fragment {
     private void toSendSignal() {
         Intent intent = new Intent();
         intent.setAction(NUMBER_OF_RECEIVER);
+        getActivity().sendBroadcast(intent);
+
+    }
+
+    private void toMiddleSignal() {
+        Intent intent = new Intent();
+        intent.setAction(NUMBER_OF_RECEIVER_MIDDLE_BACK);
         getActivity().sendBroadcast(intent);
 
     }

@@ -48,10 +48,10 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.OverScroller;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -92,11 +92,16 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
     private static final int INVALID_POINTER = -1;
     private static final String NUMBER_OF_RECEIVER = "pdfCreating";
+    private static final String NUMBER_OF_RECEIVER_NEXT = "nextPage";
+    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES = "nextPageGenikes";
+    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK = "nextPageGenikesBack";
+    private static final String NUMBER_OF_RECEIVER_MIDDLE_BACK = "middleBack";
+
     private BroadcastReceiver mBroadcastReceiver;
     private IntentFilter mFilter;
     private static final int MAIN_LOADER = 477;
-    private LinearLayout def,def2,def3;
-
+    private LinearLayout def, def2, def3;
+    private EditText mEponimo, mOnoma;
 
     private View mImageView;
     private View mOverlayView;
@@ -124,6 +129,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         ViewCompat.setElevation(findViewById(R.id.header), getResources().getDimension(R.dimen.toolbar_elevation));
         mPagerAdapter = new NavigationAdapter(getSupportFragmentManager());
         mPager = (ViewPager) findViewById(R.id.pager);
+
         mPager.setOffscreenPageLimit(2);
         mPager.setAdapter(mPagerAdapter);
         mImageView = findViewById(R.id.image);
@@ -174,6 +180,10 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         mBroadcastReceiver = new broadcastReceived();
         mFilter = new IntentFilter();
         mFilter.addAction(NUMBER_OF_RECEIVER);
+        mFilter.addAction(NUMBER_OF_RECEIVER_NEXT);
+        mFilter.addAction(NUMBER_OF_RECEIVER_NEXT_GENIKES);
+        mFilter.addAction(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK);
+        mFilter.addAction(NUMBER_OF_RECEIVER_MIDDLE_BACK);
     }
 
     @Override
@@ -186,7 +196,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(mBroadcastReceiver,mFilter);
+        registerReceiver(mBroadcastReceiver, mFilter);
     }
 
     protected int getScreenHeight() {
@@ -414,12 +424,12 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         }
     }
 
-    public class broadcastReceived extends BroadcastReceiver {
+    private class broadcastReceived extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
             String actionGet = intent.getAction();
-            if(actionGet.equals(NUMBER_OF_RECEIVER)){
+            if (actionGet.equals(NUMBER_OF_RECEIVER)) {
                 LoaderManager loaderManager = getSupportLoaderManager();
                 Loader<String> githubSearchLoader = loaderManager.getLoader(MAIN_LOADER);
                 if (githubSearchLoader == null) {
@@ -427,10 +437,27 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                 } else {
                     loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
                 }
-                Log.e("Intent","Received");
+                Log.e("Intent", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT)) {
+
+                mPager.setCurrentItem(1);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES)) {
+
+                mPager.setCurrentItem(2);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK)) {
+
+                mPager.setCurrentItem(0);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_MIDDLE_BACK)) {
+
+                mPager.setCurrentItem(1);
+                Log.e("IntentNextPage", "Received");
             }
         }
     }
+
     private LoaderManager.LoaderCallbacks mLoaderToCreatePdf = new LoaderManager.LoaderCallbacks<Bitmap>() {
 
         @Override
@@ -546,12 +573,18 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
 
+            mEponimo = (EditText) findViewById(R.id.stoixeiaEponimo);
+            mOnoma = (EditText) findViewById(R.id.stoixeiaOnoma);
+            String eponimoString = mEponimo.getText().toString();
+            String onomaString = mOnoma.getText().toString();
+
             Intent email = new Intent(Intent.ACTION_SEND);
-            email.putExtra(Intent.EXTRA_EMAIL, "receiver_email_address");
-            email.putExtra(Intent.EXTRA_SUBJECT, "subject");
-            email.putExtra(Intent.EXTRA_TEXT, "email body");
+            email.putExtra(Intent.EXTRA_EMAIL, new String[]{"farmaker47@gmail.com", "activewayoflife@gmail.com"});
+            email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
+            email.putExtra(Intent.EXTRA_TEXT, "Χαίρεται. Το όνομά μου είναι " + onomaString + " " + eponimoString + " και σας στέλνω το ερωτηματολόγιο. " +
+                    "Παρακαλώ εικοινωνήστε μαζί μου στο e-mail ή στο τηλέφωνο. Ευχαριστώ!");
             Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
-                    .getAbsolutePath() + "/EuZin",  "EuZin.pdf"));
+                    .getAbsolutePath() + "/EuZin", "EuZin.pdf"));
             email.putExtra(Intent.EXTRA_STREAM, uri);
             email.setType("application/pdf");
             email.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/stoixeiaEponimo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ΕΠΩΝΥΜΟ" />
@@ -54,6 +55,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/stoixeiaOnoma"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="ΟΝΟΜΑ" />
@@ -193,13 +195,27 @@
             android:textColor="@color/icons"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/apostoli"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="24dp"
-            android:text="ΑΠΟΣΤΟΛΗ ΣΤΟΙΧΕΙΩΝ" />
+            android:layout_marginTop="24dp">
+            <Button
+                android:id="@+id/backTooMain"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="ΠΙΣΩ" />
+            <Button
+                android:id="@+id/apostoli"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="ΑΠΟΣΤΟΛΗ ΣΤΟΙΧΕΙΩΝ" />
+        </LinearLayout>
+
+
 
         <View
             android:layout_width="match_parent"

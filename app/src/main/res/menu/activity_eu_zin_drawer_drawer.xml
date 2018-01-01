@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/epikoinonia">
+        <menu>
+            <item
+                android:id="@+id/nav_telephone"
+                android:icon="@drawable/phone"
+                android:title="6945492375\n 6973027799" />
+            <item
+                android:id="@+id/nav_mail"
+                android:icon="@drawable/gmail"
+                android:title="E-mail" />
+        </menu>
+    </item>
+
+    <item android:title="@string/topothesia">
+        <menu>
+            <item
+                android:id="@+id/nav_map"
+                android:icon="@drawable/map"
+                android:title="Share" />
+        </menu>
+    </item>
+
+    <!--<group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Import" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Slideshow" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+    </group>-->
+
+
+
+</menu>
