@@ -398,10 +398,10 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             Fragment f;
             switch (position) {
                 case 0:
-                    f = new TuesdayFragment();
+                    f = new WednesdayFragment();
                     break;
                 case 1:
-                    f = new WednesdayFragment();
+                    f = new TuesdayFragment();
                     break;
                 case 2:
                     f = new ThursdayFragment();
