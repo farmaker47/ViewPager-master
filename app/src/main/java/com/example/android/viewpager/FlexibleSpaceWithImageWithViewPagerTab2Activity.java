@@ -140,17 +140,18 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         mTabHeight = getResources().getDimensionPixelSize(R.dimen.tab_height);
         findViewById(R.id.pager_wrapper).setPadding(0, mFlexibleSpaceHeight, 0, 0);
         mTitleView = (TextView) findViewById(R.id.title);
-        mTitleView.setText(getResources().getString(R.string.erotimatologio));
+        /*mTitleView.setText(getResources().getString(R.string.erotimatologio));*/
         setTitle(null);
 
         //Shimmer
-        ShimmerFrameLayout container_shimmer =
+        /*ShimmerFrameLayout container_shimmer =
                 (ShimmerFrameLayout) findViewById(R.id.hsimmer_for_image);
-        container_shimmer.startShimmerAnimation();
+        container_shimmer.startShimmerAnimation();*/
 
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         slidingTabLayout.setCustomTabView(R.layout.tab_indicator, android.R.id.text1);
         slidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.accentForSlide));
+        /*slidingTabLayout.setBackgroundColor(getResources().getColor(R.color.primaryEu));*/
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setViewPager(mPager);
         ((FrameLayout.LayoutParams) slidingTabLayout.getLayoutParams()).topMargin = mFlexibleSpaceHeight - mTabHeight;
@@ -387,7 +388,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
      */
     private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
-        private static final String[] TITLES = new String[]{"Πληροφορίες", "Υγεία", "Στοιχεία"};
+        private static final String[] TITLES = new String[]{"Γενικά", "Υγεία", "Στοιχεία"};
 
         public NavigationAdapter(FragmentManager fm) {
             super(fm);
@@ -579,7 +580,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             String onomaString = mOnoma.getText().toString();
 
             Intent email = new Intent(Intent.ACTION_SEND);
-            email.putExtra(Intent.EXTRA_EMAIL, new String[]{"farmaker47@gmail.com", "activewayoflife@gmail.com"});
+            email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
             email.putExtra(Intent.EXTRA_TEXT, "Χαίρεται. Το όνομά μου είναι " + onomaString + " " + eponimoString + " και σας στέλνω το ερωτηματολόγιο. " +
                     "Παρακαλώ εικοινωνήστε μαζί μου στο e-mail ή στο τηλέφωνο. Ευχαριστώ!");

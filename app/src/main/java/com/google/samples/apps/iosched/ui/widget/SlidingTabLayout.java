@@ -18,6 +18,7 @@ package com.google.samples.apps.iosched.ui.widget;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -30,6 +31,8 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.android.viewpager.R;
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
@@ -221,7 +224,10 @@ public class SlidingTabLayout extends HorizontalScrollView {
             mTabStrip.addView(tabView);
             if (i == mViewPager.getCurrentItem()) {
                 tabView.setSelected(true);
+                //Set Text color
+                /*int color = ContextCompat.getColor(tabView.getContext(), getResources().getColor(R.color.primary_text));*/
             }
+            tabTitleView.setTextColor(getResources().getColor(R.color.primary_text));
         }
     }
 

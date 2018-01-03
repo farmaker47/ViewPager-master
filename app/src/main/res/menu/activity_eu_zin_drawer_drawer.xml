@@ -6,7 +6,15 @@
             <item
                 android:id="@+id/nav_telephone"
                 android:icon="@drawable/phone"
-                android:title="6945492375\n 6973027799" />
+                android:title="6945492375" />
+            <item
+                android:id="@+id/nav_telephone2"
+                android:icon="@drawable/phone"
+                android:title="6946496987" />
+            <item
+                android:id="@+id/nav_telephone3"
+                android:icon="@drawable/office"
+                android:title="2721-402404" />
             <item
                 android:id="@+id/nav_face"
                 android:icon="@drawable/face"

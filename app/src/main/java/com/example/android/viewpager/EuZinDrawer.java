@@ -37,7 +37,7 @@ public class EuZinDrawer extends AppCompatActivity
                 emailIntent.setData(Uri.parse("mailto:"));
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"activewayoflife@gmail.com"});
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ρωτήσω πληροφορίες για το κατάστημα και το ερωτηματολόγιο Ευ Ζήν Καλαμάτας");
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(emailIntent);
@@ -91,7 +91,7 @@ public class EuZinDrawer extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.action_share_to_people) {
-            String text = "Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας http://play.google.com/store/apps/details?id=com.george.recipe";
+            String text = "Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας ---------";
             Intent shire = new Intent();
             shire.setAction(Intent.ACTION_SEND);
             shire.putExtra(Intent.EXTRA_TEXT, text);
@@ -114,7 +114,7 @@ public class EuZinDrawer extends AppCompatActivity
             emailIntent.setData(Uri.parse("mailto:"));
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"activewayoflife@gmail.com"});
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ρωτήσω πληροφορίες για το κατάστημα και το ερωτηματολόγιο Ευ Ζήν Καλαμάτας");
             if (emailIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(emailIntent);
@@ -128,7 +128,25 @@ public class EuZinDrawer extends AppCompatActivity
             }
         } else if (id == R.id.nav_telephone) {
 
-            String tele = "6973027799";
+            String tele = "6945492375";
+
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + tele));
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        } else if (id == R.id.nav_telephone2) {
+
+            String tele = "6946496987";
+
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + tele));
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        } else if (id == R.id.nav_telephone3) {
+
+            String tele = "2721402404";
 
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + tele));

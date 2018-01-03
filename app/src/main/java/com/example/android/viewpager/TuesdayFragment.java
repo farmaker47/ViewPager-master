@@ -30,18 +30,30 @@ import android.widget.ImageButton;
  */
 public class TuesdayFragment extends Fragment {
 
-    private ImageButton mButtonGenikes;
+
     private View mFragmentGenikes;
-    private static final String NUMBER_OF_RECEIVER_NEXT = "nextPage";
+
+    private ImageButton mButtonNext,mButtonBack;
+    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES = "nextPageGenikes";
+    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK = "nextPageGenikesBack";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mFragmentGenikes=inflater.inflate(R.layout.fragment_erotiseis_genikes, container, false);
-        mButtonGenikes = (ImageButton)mFragmentGenikes.findViewById(R.id.buttonGenikes);
-        mButtonGenikes.setOnClickListener(new View.OnClickListener() {
+
+        mButtonNext = (ImageButton)mFragmentGenikes.findViewById(R.id.buttonYgeiaNext);
+        mButtonBack = (ImageButton)mFragmentGenikes.findViewById(R.id.buttonYgeiaBack);
+
+        mButtonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toSendSignal();
+            }
+        });
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toSendSignalBack();
             }
         });
 
@@ -49,9 +61,18 @@ public class TuesdayFragment extends Fragment {
         return mFragmentGenikes;
     }
 
+
+
     private void toSendSignal() {
         Intent intent = new Intent();
-        intent.setAction(NUMBER_OF_RECEIVER_NEXT);
+        intent.setAction(NUMBER_OF_RECEIVER_NEXT_GENIKES);
+        getActivity().sendBroadcast(intent);
+
+    }
+
+    private void toSendSignalBack() {
+        Intent intent = new Intent();
+        intent.setAction(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK);
         getActivity().sendBroadcast(intent);
 
     }

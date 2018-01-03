@@ -31,28 +31,19 @@ import android.widget.RatingBar;
 public class WednesdayFragment extends Fragment {
 
     private View mFragmentView;
-    private RatingBar mRating;
-    private ImageButton mButtonNext,mButtonBack;
-    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES = "nextPageGenikes";
-    private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK = "nextPageGenikesBack";
+    private ImageButton mButtonGenikes;
+    private static final String NUMBER_OF_RECEIVER_NEXT = "nextPage";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mFragmentView=inflater.inflate(R.layout.fragment_erotiseis_ygeia, container, false);
-        mRating = (RatingBar)mFragmentView.findViewById(R.id.ratingBarInInfo);
-        mButtonNext = (ImageButton)mFragmentView.findViewById(R.id.buttonYgeiaNext);
-        mButtonBack = (ImageButton)mFragmentView.findViewById(R.id.buttonYgeiaBack);
-        mButtonNext.setOnClickListener(new View.OnClickListener() {
+
+        mButtonGenikes = (ImageButton)mFragmentView.findViewById(R.id.buttonGenikes);
+        mButtonGenikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toSendSignal();
-            }
-        });
-        mButtonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toSendSignalBack();
             }
         });
 
@@ -61,14 +52,7 @@ public class WednesdayFragment extends Fragment {
 
     private void toSendSignal() {
         Intent intent = new Intent();
-        intent.setAction(NUMBER_OF_RECEIVER_NEXT_GENIKES);
-        getActivity().sendBroadcast(intent);
-
-    }
-
-    private void toSendSignalBack() {
-        Intent intent = new Intent();
-        intent.setAction(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK);
+        intent.setAction(NUMBER_OF_RECEIVER_NEXT);
         getActivity().sendBroadcast(intent);
 
     }

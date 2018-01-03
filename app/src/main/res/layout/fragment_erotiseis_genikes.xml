@@ -224,15 +224,33 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/buttonGenikes"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="27dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/arrow_right"
-            android:background="@null"/>
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/buttonYgeiaBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_left"
+                android:background="@null"/>
+
+            <ImageButton
+                android:id="@+id/buttonYgeiaNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="7dp"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_right"
+                android:background="@null"/>
+
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
