@@ -23,20 +23,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * Fragment that displays "Tuesday".
  */
 public class TuesdayFragment extends Fragment {
 
-    private Button mButtonGenikes;
+    private ImageButton mButtonGenikes;
     private View mFragmentGenikes;
     private static final String NUMBER_OF_RECEIVER_NEXT = "nextPage";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mFragmentGenikes=inflater.inflate(R.layout.fragment_erotiseis_genikes, container, false);
-        mButtonGenikes = (Button)mFragmentGenikes.findViewById(R.id.buttonGenikes);
+        mButtonGenikes = (ImageButton)mFragmentGenikes.findViewById(R.id.buttonGenikes);
         mButtonGenikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

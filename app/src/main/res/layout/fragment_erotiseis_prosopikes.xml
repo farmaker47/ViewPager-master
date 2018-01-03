@@ -199,13 +199,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp">
-            <Button
+            <ImageButton
                 android:id="@+id/backTooMain"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="ΠΙΣΩ" />
+                android:background="@null"
+                android:src="@drawable/arrow_left" />
             <Button
                 android:id="@+id/apostoli"
                 android:layout_width="0dp"

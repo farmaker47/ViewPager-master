@@ -3,10 +3,7 @@ package com.example.android.viewpager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,14 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-
-import java.io.File;
+import android.view.View;
+import android.widget.ImageView;
 
 public class EuZinDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button mButtonToerotimatologio;
+    private ImageView mImageMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +27,7 @@ public class EuZinDrawer extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mButtonToerotimatologio = (Button)findViewById(R.id.buttonToErotimatologio);
+        mImageMain = (ImageView) findViewById(R.id.imageMainDrawer);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +54,10 @@ public class EuZinDrawer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        mButtonToerotimatologio.setOnClickListener(new View.OnClickListener() {
+        mImageMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EuZinDrawer.this,FlexibleSpaceWithImageWithViewPagerTab2Activity.class);
+                Intent intent = new Intent(EuZinDrawer.this, FlexibleSpaceWithImageWithViewPagerTab2Activity.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +90,7 @@ public class EuZinDrawer extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        }else if (id == R.id.action_share_to_people){
+        } else if (id == R.id.action_share_to_people) {
             String text = "Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας http://play.google.com/store/apps/details?id=com.george.recipe";
             Intent shire = new Intent();
             shire.setAction(Intent.ACTION_SEND);
@@ -125,14 +121,12 @@ public class EuZinDrawer extends AppCompatActivity
             }
 
         } else if (id == R.id.nav_map) {
-
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("geo:37.039691,22.110437?z=18"));
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
-
-        }else if (id == R.id.nav_telephone) {
+        } else if (id == R.id.nav_telephone) {
 
             String tele = "6973027799";
 
@@ -141,6 +135,13 @@ public class EuZinDrawer extends AppCompatActivity
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
+        } else if (id == R.id.nav_face) {
+            Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
+            myWebLink.setData(Uri.parse("https://www.facebook.com/efzinkalamata/"));
+            if (myWebLink.resolveActivity(getPackageManager()) != null) {
+                startActivity(myWebLink);
+            }
+
         }
 
 

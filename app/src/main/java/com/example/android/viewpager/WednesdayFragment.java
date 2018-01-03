@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RatingBar;
 
 /**
@@ -31,7 +32,7 @@ public class WednesdayFragment extends Fragment {
 
     private View mFragmentView;
     private RatingBar mRating;
-    private Button mButtonNext,mButtonBack;
+    private ImageButton mButtonNext,mButtonBack;
     private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES = "nextPageGenikes";
     private static final String NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK = "nextPageGenikesBack";
 
@@ -40,8 +41,8 @@ public class WednesdayFragment extends Fragment {
 
         mFragmentView=inflater.inflate(R.layout.fragment_erotiseis_ygeia, container, false);
         mRating = (RatingBar)mFragmentView.findViewById(R.id.ratingBarInInfo);
-        mButtonNext = (Button)mFragmentView.findViewById(R.id.buttonYgeiaNext);
-        mButtonBack = (Button)mFragmentView.findViewById(R.id.buttonYgeiaBack);
+        mButtonNext = (ImageButton)mFragmentView.findViewById(R.id.buttonYgeiaNext);
+        mButtonBack = (ImageButton)mFragmentView.findViewById(R.id.buttonYgeiaBack);
         mButtonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

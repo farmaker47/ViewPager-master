@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_eu_zin_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.android.viewpager.EuZinDrawer"
-    tools:showIn="@layout/app_bar_eu_zin_drawer"
-    android:background="@color/primaryEu">
+    tools:showIn="@layout/app_bar_eu_zin_drawer">
 
-    <ImageView
-        android:id="@+id/imageMainDrawer"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ef"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:id="@+id/buttonToErotimatologio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ερωτηματολoγιο"
-        android:layout_marginTop="10dp"
-        android:layout_centerVertical="true"
-        android:layout_below="@id/imageMainDrawer"
-        android:textStyle="bold|italic"
-        android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:id="@+id/imageIdato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/idatografimaa" />
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageIdato"
+            android:layout_centerHorizontal="true"
+            android:text="ΕΡΩΤΗΜΑΤΟΛΟΓΙΟ"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageMainDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </RelativeLayout>
+
+
+</ScrollView>

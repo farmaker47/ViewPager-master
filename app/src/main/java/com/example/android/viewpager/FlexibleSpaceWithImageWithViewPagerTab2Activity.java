@@ -524,7 +524,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         a.add(bitmap2);
                         a.add(bitmap);
                         a.add(bitmap3);
-                        combinedBitmap = combineImageIntoOneFlex(a);
+                        combinedBitmap = combineImageIntoOneFlexWidth(a);
                         Log.e("CombinedImage", "OK");
 
                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -610,10 +610,32 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         Canvas canvas = new Canvas(temp);
         int top = 0;
         for (int i = 0; i < bitmap.size(); i++) {
-            Log.d("HTML", "Combine: " + i + "/" + bitmap.size() + 1);
+            Log.e("HTML", "Combine: " + i + "/" + bitmap.size() + 1);
 
             top = (i == 0 ? 0 : top + bitmap.get(i).getHeight());
             canvas.drawBitmap(bitmap.get(i), 0f, top, null);
+        }
+        return temp;
+    }
+
+    private Bitmap combineImageIntoOneFlexWidth(ArrayList<Bitmap> bitmap) {
+        int w = 0, h = 0;
+        for (int i = 0; i < bitmap.size(); i++) {
+            if (i < bitmap.size() - 1) {
+                h = bitmap.get(i).getHeight() > bitmap.get(i + 1).getHeight() ? bitmap.get(i).getHeight() : bitmap.get(i + 1).getHeight();
+            }
+            w += bitmap.get(i).getWidth();
+        }
+
+        Bitmap temp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(temp);
+        int top = 0;
+        for (int i = 0; i < bitmap.size(); i++) {
+            Log.e("HTML", "Combine: " + i + "/" + bitmap.size() + 1);
+
+            top = (i == 0 ? 0 : top + bitmap.get(i).getWidth());
+            //attributes 1:bitmap,2:width that starts drawing,3:height that starts drawing
+            canvas.drawBitmap(bitmap.get(i), top, 0f, null);
         }
         return temp;
     }

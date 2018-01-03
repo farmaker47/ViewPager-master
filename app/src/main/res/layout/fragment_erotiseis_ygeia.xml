@@ -342,23 +342,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/buttonYgeiaBack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginLeft="7dp"
                 android:layout_weight="1"
-                android:text="ΠΡΟΗΓΟΥΜΕΝΟ" />
+                 android:src="@drawable/arrow_left"
+                android:background="@null"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/buttonYgeiaNext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginRight="7dp"
                 android:layout_weight="1"
-                android:text="ΕΠΟΜΕΝΟ" />
+                android:src="@drawable/arrow_right"
+                android:background="@null"/>
 
         </LinearLayout>
 

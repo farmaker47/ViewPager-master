@@ -8,9 +8,14 @@
                 android:icon="@drawable/phone"
                 android:title="6945492375\n 6973027799" />
             <item
+                android:id="@+id/nav_face"
+                android:icon="@drawable/face"
+                android:title="Facebook" />
+            <item
                 android:id="@+id/nav_mail"
                 android:icon="@drawable/gmail"
                 android:title="E-mail" />
+
         </menu>
     </item>
 

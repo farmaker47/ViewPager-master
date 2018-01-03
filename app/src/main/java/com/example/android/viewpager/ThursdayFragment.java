@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -23,7 +24,8 @@ public class ThursdayFragment extends Fragment {
 
     private TextView imerominia;
     private View mThursdayFragmentView;
-    private Button mButtonApostoli,mButttonBack;
+    private Button mButtonApostoli;
+    private ImageButton mButttonBack;
     private static final String NUMBER_OF_RECEIVER = "pdfCreating";
     private static final String NUMBER_OF_RECEIVER_MIDDLE_BACK = "middleBack";
 
@@ -33,7 +35,7 @@ public class ThursdayFragment extends Fragment {
         mThursdayFragmentView = inflater.inflate(R.layout.fragment_erotiseis_prosopikes, container, false);
         imerominia = (TextView) mThursdayFragmentView.findViewById(R.id.imerominiaTextDisplay);
         mButtonApostoli = (Button) mThursdayFragmentView.findViewById(R.id.apostoli);
-        mButttonBack = (Button)mThursdayFragmentView.findViewById(R.id.backTooMain);
+        mButttonBack = (ImageButton)mThursdayFragmentView.findViewById(R.id.backTooMain);
         mButtonApostoli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
