@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:padding="4dp"
+            android:padding="7dp"
             android:text="Παρακαλώ αναφέρετε τα προβλήματα υγείας που θα θέλατε να διορθώσετε και αναφέρετε πόσο καιρό τα έχετε. Επίσης αναφέρατε πιθανά προβλήματα που θα θέλατε να αποφύγετε στο μέλλον."
             android:textAlignment="textStart"
             android:textColor="@color/icons" />
@@ -54,31 +54,63 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="1." />
+                android:text="Αναφέρατε προβλήματα και διάρκεια"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="2." />
+                android:layout_height="wrap_content">
 
-            <EditText
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="1." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="3." />
+                android:layout_height="wrap_content">
 
-            <EditText
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="2." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="4." />
+                android:layout_height="wrap_content">
 
-            <EditText
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="3." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="5." />
+                android:layout_height="wrap_content">
 
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="4." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="5." />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -102,20 +134,43 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="1." />
+                android:text="Είδος, Δοσολογία"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="2." />
+                android:layout_height="wrap_content">
 
-            <EditText
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="1." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="3." />
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="2." />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="3." />
+            </android.support.design.widget.TextInputLayout>
 
 
         </LinearLayout>
@@ -128,8 +183,9 @@
             android:layout_marginTop="5dp"
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
-            android:text="Συμπληρώματα διατροφής"
+            android:text="Συμπληρώματα διατροφής και γενικές ερωτήσεις"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#ffffff"
             android:textSize="24sp" />
@@ -146,9 +202,81 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Είδη συμπληρωμάτων" />
+                    android:hint="Είδη συμπληρωμάτων και δοσολογία" />
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Συνθήκες υπο τις οποίες βελτιώνονται τα προβληματά σας:" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Συνθήκες υπο τις οποίες επιδεινώνονται τα προβληματά σας:" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Νοσήματα τελευταίας δεκαετίας:" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Επεμβάσεις στο παρελθόν:" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/view_edit_header_for_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Αρτηριακή Πίεση και σφίξεις ανα λεπτό"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/view_edit_for_item_onoma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Σε ηρεμία και καθιστή θέση" />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -179,7 +307,7 @@
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Έχετε παιδιά; Φύλο και ηλικία;" />
+                    android:hint="Έχετε παιδιά; Φύλο και ηλικία:" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -189,7 +317,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Πόσα αδέλφια έχετε; Φύλο και ηλικία;" />
+                    android:hint="Πόσα αδέλφια έχετε; Ηλικία και φύλλο:" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -209,7 +337,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Κατάσταση υγείας πατέρα;" />
+                    android:hint="Κατάσταση υγείας πατέρα:" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -219,7 +347,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Κατάσταση υγείας μητέρας;" />
+                    android:hint="Κατάσταση υγείας μητέρας:" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -237,8 +365,8 @@
                 android:layout_gravity="start"
                 android:layout_marginLeft="7dp"
                 android:layout_weight="1"
-                android:src="@drawable/arrow_left"
-                android:background="@null"/>
+                android:background="@null"
+                android:src="@drawable/arrow_left" />
 
             <ImageButton
                 android:id="@+id/buttonYgeiaNext"
@@ -247,16 +375,15 @@
                 android:layout_gravity="end"
                 android:layout_marginRight="7dp"
                 android:layout_weight="1"
-                android:src="@drawable/arrow_right"
-                android:background="@null"/>
+                android:background="@null"
+                android:src="@drawable/arrow_right" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/primaryEu">
-        </View>
+            android:background="@color/primaryEu"></View>
 
     </LinearLayout>
 </ScrollView>
