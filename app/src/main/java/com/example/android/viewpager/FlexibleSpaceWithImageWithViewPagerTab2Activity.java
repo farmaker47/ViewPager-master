@@ -101,7 +101,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     private BroadcastReceiver mBroadcastReceiver;
     private IntentFilter mFilter;
     private static final int MAIN_LOADER = 477;
-    private LinearLayout def, def2, def3;
+    private LinearLayout def, def2, def3,def4;
     private EditText mEponimo, mOnoma;
 
     private View mImageView;
@@ -492,7 +492,8 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
                         PdfWriter.getInstance(doc, fOut);
 
-                        def = (LinearLayout) findViewById(R.id.linearInfo);
+                        def = (LinearLayout) findViewById(R.id.linearYgeia1);
+                        def4 = (LinearLayout) findViewById(R.id.linearYgeia2);
                         def2 = (LinearLayout) findViewById(R.id.linearYgeia);
                         def3 = (LinearLayout) findViewById(R.id.linearProsopikes);
 
@@ -505,12 +506,16 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def3.getRootView();
                         def3.setDrawingCacheEnabled(true);
 
-                        Bitmap bitmapBig,bitmap, bitmap2, bitmap3;
+                        def4.getRootView();
+                        def4.setDrawingCacheEnabled(true);
 
-                        bitmapBig = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
+                        Bitmap bitmap4,bitmap, bitmap2, bitmap3;
+
+                        bitmap = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
 
                         bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
+                        bitmap4 = Bitmap.createBitmap(def4.getWidth(), def4.getHeight(), Bitmap.Config.ARGB_8888);
                        /* ByteArrayOutputStream streamBitmapBig = new ByteArrayOutputStream();
                         bitmapBig.compress(Bitmap.CompressFormat.JPEG,50,streamBitmapBig);
                         byte[] byteArray = streamBitmapBig.toByteArray();
@@ -522,7 +527,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         Bitmap workingBitmap = Bitmap.createBitmap(bitmap);
                         Bitmap mutableBitmap = workingBitmap.copy(Bitmap.Config.ARGB_8888, true);*/
 
-                        Canvas c = new Canvas(bitmapBig);
+                        Canvas c = new Canvas(bitmap);
                         c.drawColor(Color.LTGRAY);
                         def.draw(c);
 
@@ -534,10 +539,15 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         c3.drawColor(Color.LTGRAY);
                         def3.draw(c3);
 
+                        Canvas c4 = new Canvas(bitmap4);
+                        c4.drawColor(Color.LTGRAY);
+                        def4.draw(c4);
+
                         ArrayList<Bitmap> a = new ArrayList<Bitmap>();
                         a.add(bitmap2);
                         a.add(bitmap3);
-                        a.add(bitmapBig);
+                        a.add(bitmap);
+                        a.add(bitmap4);
                         combinedBitmap = combineImageIntoOneFlexWidth(a);
                         Log.e("CombinedImage", "OK");
 
@@ -559,6 +569,20 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
                         // add image to document
                         doc.add(myImg);
+
+                        ////new page
+                        /*Image myImage2 = Image.getInstance(stream.toByteArray());
+                        doc.newPage();
+
+                        if (myImage2.getWidth() >= doc.getPageSize().getWidth() || myImage2.getHeight() >= doc.getPageSize().getHeight()) {
+                            myImage2.scaleToFit(doc.getPageSize());
+                        }
+                        myImage2.setAbsolutePosition((doc.getPageSize().getWidth() - myImage2.getScaledWidth()) / BaseField.BORDER_WIDTH_MEDIUM, (doc.getPageSize().getHeight() - myImage2.getScaledHeight()) / BaseField.BORDER_WIDTH_MEDIUM);
+
+                        myImage2.setAlignment(Image.ALIGN_CENTER);
+
+                        doc.add(myImage2);*/
+
 
 
                         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -582,7 +606,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
         @Override
         public void onLoadFinished(Loader<Bitmap> loader, Bitmap data) {
-            Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, "Η Συνταγή αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin", Toast.LENGTH_LONG).show();
+            Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, "Το .pdf αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin", Toast.LENGTH_LONG).show();
 
             InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
