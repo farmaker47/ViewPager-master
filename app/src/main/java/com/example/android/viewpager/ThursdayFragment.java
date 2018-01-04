@@ -24,7 +24,7 @@ public class ThursdayFragment extends Fragment {
 
     private TextView imerominia;
     private View mThursdayFragmentView;
-    private Button mButtonApostoli;
+    private ImageButton mButtonApostoli;
     private ImageButton mButttonBack;
     private static final String NUMBER_OF_RECEIVER = "pdfCreating";
     private static final String NUMBER_OF_RECEIVER_MIDDLE_BACK = "middleBack";
@@ -34,7 +34,7 @@ public class ThursdayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mThursdayFragmentView = inflater.inflate(R.layout.fragment_erotiseis_prosopikes, container, false);
         imerominia = (TextView) mThursdayFragmentView.findViewById(R.id.imerominiaTextDisplay);
-        mButtonApostoli = (Button) mThursdayFragmentView.findViewById(R.id.apostoli);
+        mButtonApostoli = (ImageButton) mThursdayFragmentView.findViewById(R.id.apostoli);
         mButttonBack = (ImageButton)mThursdayFragmentView.findViewById(R.id.backTooMain);
         mButtonApostoli.setOnClickListener(new View.OnClickListener() {
             @Override

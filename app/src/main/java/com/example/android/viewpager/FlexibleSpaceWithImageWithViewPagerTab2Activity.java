@@ -522,9 +522,9 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def3.draw(c3);
 
                         ArrayList<Bitmap> a = new ArrayList<Bitmap>();
-                        a.add(bitmap2);
                         a.add(bitmap);
                         a.add(bitmap3);
+                        a.add(bitmap2);
                         combinedBitmap = combineImageIntoOneFlexWidth(a);
                         Log.e("CombinedImage", "OK");
 

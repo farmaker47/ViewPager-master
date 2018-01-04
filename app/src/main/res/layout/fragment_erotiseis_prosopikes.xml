@@ -207,13 +207,14 @@
                 android:layout_gravity="start"
                 android:background="@null"
                 android:src="@drawable/arrow_left" />
-            <Button
+            <ImageButton
                 android:id="@+id/apostoli"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="ΑΠΟΣΤΟΛΗ ΣΤΟΙΧΕΙΩΝ" />
+                android:src="@drawable/send_mail"
+                android:background="@null"/>
         </LinearLayout>
 
 
