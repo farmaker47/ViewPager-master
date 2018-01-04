@@ -38,7 +38,7 @@ public class EuZinDrawer extends AppCompatActivity
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ρωτήσω πληροφορίες για το κατάστημα και το ερωτηματολόγιο Ευ Ζήν Καλαμάτας");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας");
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(emailIntent);
                 }
@@ -115,7 +115,7 @@ public class EuZinDrawer extends AppCompatActivity
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ρωτήσω πληροφορίες για το κατάστημα και το ερωτηματολόγιο Ευ Ζήν Καλαμάτας");
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας");
             if (emailIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(emailIntent);
             }

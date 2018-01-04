@@ -28,6 +28,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -516,23 +517,14 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap4 = Bitmap.createBitmap(def4.getWidth(), def4.getHeight(), Bitmap.Config.ARGB_8888);
-                       /* ByteArrayOutputStream streamBitmapBig = new ByteArrayOutputStream();
-                        bitmapBig.compress(Bitmap.CompressFormat.JPEG,50,streamBitmapBig);
-                        byte[] byteArray = streamBitmapBig.toByteArray();
-
-                        bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
-                        bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
-                        bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
-
-                        Bitmap workingBitmap = Bitmap.createBitmap(bitmap);
-                        Bitmap mutableBitmap = workingBitmap.copy(Bitmap.Config.ARGB_8888, true);*/
 
                         Canvas c = new Canvas(bitmap);
-                        c.drawColor(Color.LTGRAY);
+                        c.drawARGB(0, 225, 225, 255);
+                        /*c.drawColor(Color.LTGRAY);*/
                         def.draw(c);
 
                         Canvas c2 = new Canvas(bitmap2);
-                        c2.drawColor(Color.LTGRAY);
+                        c2.drawColor(Color.WHITE);
                         def2.draw(c2);
 
                         Canvas c3 = new Canvas(bitmap3);
@@ -544,10 +536,10 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def4.draw(c4);
 
                         ArrayList<Bitmap> a = new ArrayList<Bitmap>();
-                        a.add(bitmap2);
-                        a.add(bitmap3);
                         a.add(bitmap);
                         a.add(bitmap4);
+                        a.add(bitmap2);
+                        a.add(bitmap3);
                         combinedBitmap = combineImageIntoOneFlexWidth(a);
                         Log.e("CombinedImage", "OK");
 
@@ -582,8 +574,6 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         myImage2.setAlignment(Image.ALIGN_CENTER);
 
                         doc.add(myImage2);*/
-
-
 
                         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                         imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
@@ -659,9 +649,10 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     private Bitmap combineImageIntoOneFlexWidth(ArrayList<Bitmap> bitmap) {
         int w = 0, h = 0;
         for (int i = 0; i < bitmap.size(); i++) {
-            if (i < bitmap.size() - 1) {
+            /*if (i < bitmap.size() - 1) {
                 h = bitmap.get(i).getHeight() > bitmap.get(i + 1).getHeight() ? bitmap.get(i).getHeight() : bitmap.get(i + 1).getHeight();
-            }
+            }*/
+            h = bitmap.get(1).getHeight();
             w += bitmap.get(i).getWidth();
         }
 
