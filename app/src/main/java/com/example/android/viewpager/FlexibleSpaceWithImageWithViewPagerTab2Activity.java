@@ -25,6 +25,7 @@ import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.net.Uri;
@@ -470,6 +471,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
                 @Override
                 protected void onStartLoading() {
+                    Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this,"Επεξεργασία στοιχείων για αποστολή...",Toast.LENGTH_LONG).show();
 
                     forceLoad();
                 }
@@ -503,13 +505,24 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def3.getRootView();
                         def3.setDrawingCacheEnabled(true);
 
-                        Bitmap bitmap, bitmap2, bitmap3;
+                        Bitmap bitmapBig,bitmap, bitmap2, bitmap3;
 
-                        bitmap = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
+                        bitmapBig = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
+
+                        bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
+                        bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
+                       /* ByteArrayOutputStream streamBitmapBig = new ByteArrayOutputStream();
+                        bitmapBig.compress(Bitmap.CompressFormat.JPEG,50,streamBitmapBig);
+                        byte[] byteArray = streamBitmapBig.toByteArray();
+
+                        bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
                         bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
 
-                        Canvas c = new Canvas(bitmap);
+                        Bitmap workingBitmap = Bitmap.createBitmap(bitmap);
+                        Bitmap mutableBitmap = workingBitmap.copy(Bitmap.Config.ARGB_8888, true);*/
+
+                        Canvas c = new Canvas(bitmapBig);
                         c.drawColor(Color.LTGRAY);
                         def.draw(c);
 
@@ -522,9 +535,9 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def3.draw(c3);
 
                         ArrayList<Bitmap> a = new ArrayList<Bitmap>();
-                        a.add(bitmap);
-                        a.add(bitmap3);
                         a.add(bitmap2);
+                        a.add(bitmap3);
+                        a.add(bitmapBig);
                         combinedBitmap = combineImageIntoOneFlexWidth(a);
                         Log.e("CombinedImage", "OK");
 
