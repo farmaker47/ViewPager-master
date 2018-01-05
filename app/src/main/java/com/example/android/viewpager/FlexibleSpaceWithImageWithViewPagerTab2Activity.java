@@ -616,7 +616,9 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             email.putExtra(Intent.EXTRA_STREAM, uri);
             email.setType("application/pdf");
             email.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(email);
+            if (email.resolveActivity(getPackageManager()) != null) {
+                startActivity(email);
+            }
         }
 
         @Override

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/action_share_to_people"
         android:orderInCategory="1"
-        android:title="Οδηγίες χρήσης"
+        android:title="Αποστολή"
         app:showAsAction="ifRoom"
         android:icon="@drawable/share"/>
     <item

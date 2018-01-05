@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,6 +27,9 @@ public class EuZinDrawer extends AppCompatActivity
         setContentView(R.layout.activity_eu_zin_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Πληροφορίες");
 
         mImageMain = (ImageView) findViewById(R.id.imageMainDrawer);
 
@@ -89,6 +93,8 @@ public class EuZinDrawer extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(EuZinDrawer.this,Odigies.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_share_to_people) {
             String text = "Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας ---------";
