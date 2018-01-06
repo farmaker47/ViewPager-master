@@ -27,16 +27,10 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SecondActivity" />
         <activity
             android:name=".FlexibleSpaceWithImageWithViewPagerTab2Activity"
-            android:windowSoftInputMode="adjustPan"></activity>
-
-        <!--
-            <service android:name=".ServiceForPdf"
-            android:exported="false"/>
-        -->
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|screenSize"></activity>
         <activity
             android:name=".EuZinDrawer"
             android:label="@string/title_activity_eu_zin_drawer"

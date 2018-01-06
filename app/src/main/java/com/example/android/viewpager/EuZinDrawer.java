@@ -25,11 +25,12 @@ public class EuZinDrawer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eu_zin_drawer);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
-        ab.setTitle("Πληροφορίες");
+        ab.setTitle(getResources().getString(R.string.drawer_header_info));
 
         mImageMain = (ImageView) findViewById(R.id.imageMainDrawer);
 
@@ -39,10 +40,11 @@ public class EuZinDrawer extends AppCompatActivity
             public void onClick(View view) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                 emailIntent.setData(Uri.parse("mailto:"));
+                //if you want to send email with no mail apps use next
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.extra_mail_subject));
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(emailIntent);
                 }
@@ -93,16 +95,16 @@ public class EuZinDrawer extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(EuZinDrawer.this,Odigies.class);
+            Intent intent = new Intent(EuZinDrawer.this, Odigies.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_share_to_people) {
-            String text = "Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας ---------";
+            String text = getResources().getString(R.string.tsekare_me_internet);
             Intent shire = new Intent();
             shire.setAction(Intent.ACTION_SEND);
             shire.putExtra(Intent.EXTRA_TEXT, text);
             shire.setType("text/plain");
-            startActivity(Intent.createChooser(shire, "Αποστολή εφαρμογής:"));
+            startActivity(Intent.createChooser(shire, getResources().getString(R.string.send_app_header_of_intent)));
             return true;
         }
 
@@ -121,7 +123,7 @@ public class EuZinDrawer extends AppCompatActivity
             /*Intent emailIntent = new Intent(Intent.ACTION_SEND);
             emailIntent.setType("*//*");*/
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας");
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.extra_mail_subject));
             if (emailIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(emailIntent);
             }
@@ -134,7 +136,7 @@ public class EuZinDrawer extends AppCompatActivity
             }
         } else if (id == R.id.nav_telephone) {
 
-            String tele = "6945492375";
+            String tele = getResources().getString(R.string.telephone_Pantelis);
 
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + tele));
@@ -143,7 +145,7 @@ public class EuZinDrawer extends AppCompatActivity
             }
         } else if (id == R.id.nav_telephone2) {
 
-            String tele = "6946496987";
+            String tele = getResources().getString(R.string.telephone_Nick);
 
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + tele));
@@ -152,7 +154,7 @@ public class EuZinDrawer extends AppCompatActivity
             }
         } else if (id == R.id.nav_telephone3) {
 
-            String tele = "2721402404";
+            String tele = getResources().getString(R.string.telephone_stathero);
 
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + tele));
@@ -161,11 +163,10 @@ public class EuZinDrawer extends AppCompatActivity
             }
         } else if (id == R.id.nav_face) {
             Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-            myWebLink.setData(Uri.parse("https://www.facebook.com/efzinkalamata/"));
+            myWebLink.setData(Uri.parse(getResources().getString(R.string.facebook)));
             if (myWebLink.resolveActivity(getPackageManager()) != null) {
                 startActivity(myWebLink);
             }
-
         }
 
 

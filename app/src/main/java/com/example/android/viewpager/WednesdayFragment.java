@@ -25,9 +25,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 
-/**
- * Fragment that displays "Wednesday".
- */
 public class WednesdayFragment extends Fragment {
 
     private View mFragmentView;
@@ -56,6 +53,5 @@ public class WednesdayFragment extends Fragment {
         getActivity().sendBroadcast(intent);
 
     }
-
 
 }

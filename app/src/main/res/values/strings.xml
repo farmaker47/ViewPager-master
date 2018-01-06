@@ -67,4 +67,20 @@
     Αφού βάλετε τα στοιχεία σας πατήστε στο σήμα με το e-mail για να αποστείλετε τα στοιχεία στο κατάστημα. Μπορείτε να γυρίσετε πίσω με τα πράσινα βελάκια για να
     ξαναδείτε και να διορθώσετε τις απαντήσεις σας. Αν γυρίσετε στην κεντρική εισαγωγική οθόνη με το λευκό σήμα τότε όλα τα στοιχεία σβήνουν. Για περισσότερες
     πληροφορίες στείλτε e-mail πατώντας το πράσινο κουμπί στην κεντρική οθόνη</string>
+    <string name="drawer_header_info">Πληροφορίες</string>
+    <string name="extra_mail_subject">Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας</string>
+    <string name="tsekare_me_internet">Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας ---------</string>
+    <string name="send_app_header_of_intent">Αποστολή εφαρμογής:</string>
+    <string name="telephone_Pantelis">6945492375</string>
+    <string name="telephone_Nick">6946496987</string>
+    <string name="telephone_stathero">2721402404</string>
+    <string name="facebook">https://www.facebook.com/efzinkalamata/</string>
+    <string name="genika">Γενικά</string>
+    <string name="health">Υγεία</string>
+    <string name="info">Στοιχεία</string>
+    <string name="toast_while_wait">Επεξεργασία στοιχείων για αποστολή...</string>
+    <string name="toast_end_pdf">Το .pdf αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin</string>
+    <string name="hello">Χαίρεται. Το όνομά μου είναι </string>
+    <string name="apostelo">και σας στέλνω το ερωτηματολόγιο.</string>
+    <string name="parakalo">Παρακαλώ εικοινωνήστε μαζί μου στο e-mail ή στο τηλέφωνο. Ευχαριστώ!</string>
 </resources>

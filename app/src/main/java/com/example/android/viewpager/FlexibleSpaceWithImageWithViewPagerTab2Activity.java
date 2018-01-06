@@ -25,10 +25,8 @@ import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -57,7 +55,6 @@ import android.widget.OverScroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.shimmer.ShimmerFrameLayout;
 import com.github.ksoichiro.android.observablescrollview.CacheFragmentStatePagerAdapter;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
@@ -102,7 +99,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     private BroadcastReceiver mBroadcastReceiver;
     private IntentFilter mFilter;
     private static final int MAIN_LOADER = 477;
-    private LinearLayout def, def2, def3,def4;
+    private LinearLayout def, def2, def3, def4;
     private EditText mEponimo, mOnoma;
 
     private View mImageView;
@@ -132,7 +129,10 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         mPagerAdapter = new NavigationAdapter(getSupportFragmentManager());
         mPager = (ViewPager) findViewById(R.id.pager);
 
+        //set below method so the pager remembers 2 previous or next pages because default is 1 and when you try
+        //to make pdf it will crash if you have more than 2 pages
         mPager.setOffscreenPageLimit(2);
+
         mPager.setAdapter(mPagerAdapter);
         mImageView = findViewById(R.id.image);
         mOverlayView = findViewById(R.id.overlay);
@@ -142,18 +142,11 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         mTabHeight = getResources().getDimensionPixelSize(R.dimen.tab_height);
         findViewById(R.id.pager_wrapper).setPadding(0, mFlexibleSpaceHeight, 0, 0);
         mTitleView = (TextView) findViewById(R.id.title);
-        /*mTitleView.setText(getResources().getString(R.string.erotimatologio));*/
         setTitle(null);
-
-        //Shimmer
-        /*ShimmerFrameLayout container_shimmer =
-                (ShimmerFrameLayout) findViewById(R.id.hsimmer_for_image);
-        container_shimmer.startShimmerAnimation();*/
 
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         slidingTabLayout.setCustomTabView(R.layout.tab_indicator, android.R.id.text1);
         slidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.accentForSlide));
-        /*slidingTabLayout.setBackgroundColor(getResources().getColor(R.color.primaryEu));*/
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setViewPager(mPager);
         ((FrameLayout.LayoutParams) slidingTabLayout.getLayoutParams()).topMargin = mFlexibleSpaceHeight - mTabHeight;
@@ -193,6 +186,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     protected void onPause() {
         super.onPause();
         unregisterReceiver(mBroadcastReceiver);
+        //destry loader to avoid make again pdf when app resumes
         getSupportLoaderManager().destroyLoader(MAIN_LOADER);
     }
 
@@ -388,9 +382,14 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
      * This adapter provides two types of fragments as an example.
      * {@linkplain #createItem(int)} should be modified if you use this example for your app.
      */
-    private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
-        private static final String[] TITLES = new String[]{"Γενικά", "Υγεία", "Στοιχεία"};
+    private class NavigationAdapter extends CacheFragmentStatePagerAdapter {
+
+        String genika = getResources().getString(R.string.genika);
+        String health = getResources().getString(R.string.health);
+        String info = getResources().getString(R.string.info);
+
+        private  final String[] TITLES = new String[]{genika, health, info};
 
         public NavigationAdapter(FragmentManager fm) {
             super(fm);
@@ -440,23 +439,23 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                 } else {
                     loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
                 }
-                Log.e("Intent", "Received");
+                Log.d("Intent", "Received");
             } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT)) {
 
                 mPager.setCurrentItem(1);
-                Log.e("IntentNextPage", "Received");
+                Log.d("IntentNextPage", "Received");
             } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES)) {
 
                 mPager.setCurrentItem(2);
-                Log.e("IntentNextPage", "Received");
+                Log.d("IntentNextPage", "Received");
             } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK)) {
 
                 mPager.setCurrentItem(0);
-                Log.e("IntentNextPage", "Received");
+                Log.d("IntentNextPage", "Received");
             } else if (actionGet.equals(NUMBER_OF_RECEIVER_MIDDLE_BACK)) {
 
                 mPager.setCurrentItem(1);
-                Log.e("IntentNextPage", "Received");
+                Log.d("IntentNextPage", "Received");
             }
         }
     }
@@ -472,7 +471,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
                 @Override
                 protected void onStartLoading() {
-                    Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this,"Επεξεργασία στοιχείων για αποστολή...",Toast.LENGTH_LONG).show();
+                    Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, getResources().getString(R.string.toast_while_wait), Toast.LENGTH_LONG).show();
 
                     forceLoad();
                 }
@@ -510,10 +509,9 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         def4.getRootView();
                         def4.setDrawingCacheEnabled(true);
 
-                        Bitmap bitmap4,bitmap, bitmap2, bitmap3;
+                        Bitmap bitmap4, bitmap, bitmap2, bitmap3;
 
                         bitmap = Bitmap.createBitmap(def.getWidth(), def.getHeight(), Bitmap.Config.ARGB_8888);
-
                         bitmap2 = Bitmap.createBitmap(def2.getWidth(), def2.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap3 = Bitmap.createBitmap(def3.getWidth(), def3.getHeight(), Bitmap.Config.ARGB_8888);
                         bitmap4 = Bitmap.createBitmap(def4.getWidth(), def4.getHeight(), Bitmap.Config.ARGB_8888);
@@ -541,14 +539,14 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                         a.add(bitmap2);
                         a.add(bitmap3);
                         combinedBitmap = combineImageIntoOneFlexWidth(a);
-                        Log.e("CombinedImage", "OK");
+                        Log.d("CombinedImage", "OK");
 
                         ByteArrayOutputStream stream = new ByteArrayOutputStream();
 
                         combinedBitmap.compress(Bitmap.CompressFormat.JPEG, 10, stream);
-                        Log.e("Compress", "OK");
+                        Log.d("Compress", "OK");
                         Image myImg = Image.getInstance(stream.toByteArray());
-                        Log.e("StreamToByte", "OK");
+                        Log.d("StreamToByte", "OK");
 
                         doc.open();
 
@@ -596,7 +594,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
         @Override
         public void onLoadFinished(Loader<Bitmap> loader, Bitmap data) {
-            Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, "Το .pdf αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin", Toast.LENGTH_LONG).show();
+            Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, getResources().getString(R.string.toast_end_pdf), Toast.LENGTH_LONG).show();
 
             InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
@@ -609,8 +607,8 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             Intent email = new Intent(Intent.ACTION_SEND);
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
-            email.putExtra(Intent.EXTRA_TEXT, "Χαίρεται. Το όνομά μου είναι " + onomaString + " " + eponimoString + " και σας στέλνω το ερωτηματολόγιο. " +
-                    "Παρακαλώ εικοινωνήστε μαζί μου στο e-mail ή στο τηλέφωνο. Ευχαριστώ!");
+            email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello)+" "+ onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo)+
+                    getResources().getString(R.string.parakalo));
             Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
                     .getAbsolutePath() + "/EuZin", "EuZin.pdf"));
             email.putExtra(Intent.EXTRA_STREAM, uri);
@@ -627,6 +625,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         }
     };
 
+    //method to put layouts in pdf with height order,one on top of other
     private Bitmap combineImageIntoOneFlex(ArrayList<Bitmap> bitmap) {
         int w = 0, h = 0;
         for (int i = 0; i < bitmap.size(); i++) {
@@ -648,12 +647,14 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         return temp;
     }
 
+    //method to put layouts side by side
     private Bitmap combineImageIntoOneFlexWidth(ArrayList<Bitmap> bitmap) {
         int w = 0, h = 0;
         for (int i = 0; i < bitmap.size(); i++) {
             /*if (i < bitmap.size() - 1) {
                 h = bitmap.get(i).getHeight() > bitmap.get(i + 1).getHeight() ? bitmap.get(i).getHeight() : bitmap.get(i + 1).getHeight();
             }*/
+            //layout with number 1 is the longest
             h = bitmap.get(1).getHeight();
             w += bitmap.get(i).getWidth();
         }

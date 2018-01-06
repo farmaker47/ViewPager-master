@@ -25,9 +25,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-/**
- * Fragment that displays "Tuesday".
- */
 public class TuesdayFragment extends Fragment {
 
 
@@ -57,11 +54,8 @@ public class TuesdayFragment extends Fragment {
             }
         });
 
-
         return mFragmentGenikes;
     }
-
-
 
     private void toSendSignal() {
         Intent intent = new Intent();

@@ -8,17 +8,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-/**
- * Created by farmaker1 on 31/12/2017.
- */
 
 public class ThursdayFragment extends Fragment {
 
@@ -35,7 +30,7 @@ public class ThursdayFragment extends Fragment {
         mThursdayFragmentView = inflater.inflate(R.layout.fragment_erotiseis_prosopikes, container, false);
         imerominia = (TextView) mThursdayFragmentView.findViewById(R.id.imerominiaTextDisplay);
         mButtonApostoli = (ImageButton) mThursdayFragmentView.findViewById(R.id.apostoli);
-        mButttonBack = (ImageButton)mThursdayFragmentView.findViewById(R.id.backTooMain);
+        mButttonBack = (ImageButton) mThursdayFragmentView.findViewById(R.id.backTooMain);
         mButtonApostoli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
