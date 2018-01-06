@@ -167,4 +167,24 @@
     <string name="woman">Ερωτήσεις για γυναίκες</string>
     <string name="ygeia_Gynaikes1">Μεγάλη αιμορραγία κατά την  περίοδο</string>
     <string name="ygeia_Gynaikes2">Ακατάστατη περίοδος, προεμμηνορροϊκό σύνδρομο</string>
+    <string name="genikes_epikefalis">ΚΑΤΑΣΤΑΣΗ  ΥΓΕΙΑΣ</string>
+    <string name="genikes_textEpeksigisi">Παρακαλώ αναφέρετε τα προβλήματα υγείας που θα θέλατε να διορθώσετε και αναφέρετε πόσο καιρό τα έχετε. Επίσης αναφέρατε πιθανά προβλήματα που θα θέλατε να αποφύγετε στο μέλλον.</string>
+    <string name="genikes_text_katigories">Προβλήματα υγείας</string>
+    <string name="genikes_eidiko_epeksigimatiko_text">Αναφέρατε προβλήματα και διάρκεια</string>
+    <string name="genikes_lamvanomeni">Λαμβανόμενη φαρμακευτική αγωγή</string>
+    <string name="genikes_eidos_dosologia">Είδος, Δοσολογία</string>
+    <string name="genikes_simpliromata_kai_dosologia">Λαμβανόμενα συμπληρώματα διατροφής - γενικές ερωτήσεις</string>
+    <string name="genikes_eidi_simpliromaton">Είδη συμπληρωμάτων και δοσολογία</string>
+    <string name="genikes_sinuikes_veltiosis">Συνθήκες υπο τις οποίες βελτιώνονται τα προβληματά σας:</string>
+    <string name="genikes_sinuikes_ypotropis">Συνθήκες υπο τις οποίες επιδεινώνονται τα προβληματά σας:</string>
+    <string name="genikes_nosimata">Νοσήματα τελευταίας δεκαετίας:</string>
+    <string name="genikes_epemvasis">Επεμβάσεις στο παρελθόν:</string>
+    <string name="genikes_piesi">Αρτηριακή Πίεση και σφίξεις ανα λεπτό</string>
+    <string name="genikes_iremia">Σε ηρεμία και καθιστή θέση</string>
+    <string name="genikes_klironomikotita">Κληρονομικότητα</string>
+    <string name="genikes_paidia">Έχετε παιδιά; Φύλο και ηλικία:</string>
+    <string name="genikes_adelfia">Πόσα αδέλφια έχετε; Ηλικία και φύλλο:</string>
+    <string name="genikes_pasxoyn">Πάσχουν απο κάποια νοσήματα;</string>
+    <string name="genikes_pateras">Κατάσταση υγείας πατέρα:</string>
+    <string name="genikes_mana">Κατάσταση υγείας μητέρας:</string>
 </resources>

@@ -1542,10 +1542,7 @@
             android:src="@drawable/arrow_right" />
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/primaryEu"></View>
+        <View style="@style/view_se_ola"></View>
 
     </LinearLayout>
 </ScrollView>

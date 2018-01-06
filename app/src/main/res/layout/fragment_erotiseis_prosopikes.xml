@@ -42,8 +42,8 @@
 
                 <EditText
                     android:id="@+id/stoixeiaEponimo"
-                    android:hint="@string/prosopikes_eponimo"
-                    style="@style/prosopikes_editText" />
+                    style="@style/prosopikes_editText"
+                    android:hint="@string/prosopikes_eponimo" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout style="@style/prosopikes_textInputLayout">
@@ -135,18 +135,19 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="end">
-            <TextView
-                android:layout_marginTop="7dp"
-                android:text="@string/prosopikes_imerominia_text"
-                android:textStyle="bold"
-                style="@style/prosopikes_imerominia" />
+            android:layout_gravity="end"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_gravity="center"
+                style="@style/prosopikes_imerominia"
+                android:layout_marginTop="7dp"
+                android:text="@string/prosopikes_imerominia_text"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/imerominiaTextDisplay"
                 style="@style/prosopikes_imerominia"
+                android:layout_gravity="center"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
@@ -155,21 +156,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp">
+
             <ImageButton
                 android:id="@+id/backTooMain"
-                android:src="@drawable/arrow_left"
-                style="@style/prosopikes_button_end" />
+                style="@style/prosopikes_button_end"
+                android:src="@drawable/arrow_left" />
+
             <ImageButton
                 android:id="@+id/apostoli"
-                android:src="@drawable/send_mail"
-                style="@style/prosopikes_button_end_mail"/>
+                style="@style/prosopikes_button_end_mail"
+                android:src="@drawable/send_mail" />
         </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/prosopikes_view"
-            android:background="@color/primaryEu"></View>
+        <View style="@style/view_se_ola"></View>
 
     </LinearLayout>
 

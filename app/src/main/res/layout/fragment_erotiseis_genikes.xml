@@ -12,55 +12,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="7dp"
-            android:paddingLeft="7dp"
-            android:text="ΚΑΤΑΣΤΑΣΗ  ΥΓΕΙΑΣ"
-            android:textAlignment="textStart"
-            android:textColor="@color/icons"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/genikes_epikefalida"
+            android:text="@string/genikes_epikefalis" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:padding="7dp"
-            android:text="Παρακαλώ αναφέρετε τα προβλήματα υγείας που θα θέλατε να διορθώσετε και αναφέρετε πόσο καιρό τα έχετε. Επίσης αναφέρατε πιθανά προβλήματα που θα θέλατε να αποφύγετε στο μέλλον."
-            android:textAlignment="textStart"
-            android:textColor="@color/icons" />
+            style="@style/genikes_keimeno"
+            android:text="@string/genikes_textEpeksigisi" />
 
         <TextView
             android:id="@+id/textView"
             style="@style/view_edit_header_for_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="Προβλήματα υγείας"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:textSize="24sp" />
+            android:text="@string/genikes_text_katigories" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/relativeproto"
             style="@style/view_edit_for_item_onoma"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/textView">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Αναφέρατε προβλήματα και διάρκεια"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textSize="15sp" />
+                style="@style/genikes_eidiko_text"
+                android:text="@string/genikes_eidiko_epeksigimatiko_text" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -116,17 +87,7 @@
 
         <TextView
             style="@style/view_edit_header_for_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="Λαμβανόμενη φαρμακευτική αγωγή"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:textSize="24sp" />
+            android:text="@string/genikes_lamvanomeni" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/view_edit_for_item_onoma"
@@ -135,12 +96,8 @@
             android:layout_below="@+id/textView">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Είδος, Δοσολογία"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textSize="15sp" />
+                style="@style/genikes_eidiko_text"
+                android:text="@string/genikes_eidos_dosologia" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -177,18 +134,7 @@
 
         <TextView
             style="@style/view_edit_header_for_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="Λαμβανόμενα συμπληρώματα διατροφής - γενικές ερωτήσεις"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:textSize="24sp" />
+            android:text="@string/genikes_simpliromata_kai_dosologia" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/view_edit_for_item_onoma"
@@ -202,7 +148,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Είδη συμπληρωμάτων και δοσολογία" />
+                    android:hint="@string/genikes_eidi_simpliromaton" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -212,7 +158,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Συνθήκες υπο τις οποίες βελτιώνονται τα προβληματά σας:" />
+                    android:hint="@string/genikes_sinuikes_veltiosis" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -222,7 +168,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Συνθήκες υπο τις οποίες επιδεινώνονται τα προβληματά σας:" />
+                    android:hint="@string/genikes_sinuikes_ypotropis" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -232,7 +178,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Νοσήματα τελευταίας δεκαετίας:" />
+                    android:hint="@string/genikes_nosimata" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -242,7 +188,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Επεμβάσεις στο παρελθόν:" />
+                    android:hint="@string/genikes_epemvasis" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -250,17 +196,7 @@
 
         <TextView
             style="@style/view_edit_header_for_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="Αρτηριακή Πίεση και σφίξεις ανα λεπτό"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:textSize="24sp" />
+            android:text="@string/genikes_piesi" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/view_edit_for_item_onoma"
@@ -275,24 +211,14 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Σε ηρεμία και καθιστή θέση" />
+                    android:hint="@string/genikes_iremia" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
         <TextView
             style="@style/view_edit_header_for_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:text="Κληρονομικότητα"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff"
-            android:textSize="24sp" />
+            android:text="@string/genikes_klironomikotita" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/view_edit_for_item_onoma"
@@ -307,7 +233,7 @@
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Έχετε παιδιά; Φύλο και ηλικία:" />
+                    android:hint="@string/genikes_paidia" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -317,7 +243,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Πόσα αδέλφια έχετε; Ηλικία και φύλλο:" />
+                    android:hint="@string/genikes_adelfia" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -327,7 +253,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Πάσχουν απο κάποια νοσήματα;" />
+                    android:hint="@string/genikes_pasxoyn" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -337,7 +263,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Κατάσταση υγείας πατέρα:" />
+                    android:hint="@string/genikes_pateras" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -347,7 +273,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Κατάσταση υγείας μητέρας:" />
+                    android:hint="@string/genikes_mana" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -360,30 +286,21 @@
 
             <ImageButton
                 android:id="@+id/buttonYgeiaBack"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/genikes_arrows"
                 android:layout_gravity="start"
                 android:layout_marginLeft="7dp"
-                android:layout_weight="1"
-                android:background="@null"
                 android:src="@drawable/arrow_left" />
 
             <ImageButton
                 android:id="@+id/buttonYgeiaNext"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/genikes_arrows"
                 android:layout_gravity="end"
                 android:layout_marginRight="7dp"
-                android:layout_weight="1"
-                android:background="@null"
                 android:src="@drawable/arrow_right" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/primaryEu"></View>
+        <View style="@style/view_se_ola"></View>
 
     </LinearLayout>
 </ScrollView>
