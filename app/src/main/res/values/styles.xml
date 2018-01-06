@@ -24,13 +24,18 @@
     </style>
 
     <style name="view_edit_header_for_item">
-        <item name="android:textSize">18.0sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:background">@drawable/view_edit_item_header_bg</item>
-        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:padding">5.0dip</item>
         <item name="android:layout_marginLeft">5.0dip</item>
         <item name="android:layout_marginRight">5.0dip</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
     <style name="view_edit_for_item_onoma">
@@ -40,6 +45,8 @@
         <item name="android:layout_marginLeft">5.0dip</item>
         <item name="android:layout_marginRight">5.0dip</item>
         <item name="android:layout_marginBottom">5.0dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="view_edit_for_item_stoixeia">
@@ -115,6 +122,30 @@
     <style name="prosopikes_textInputLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ygeia_text_number">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ygeia_textperigrafi">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="ygeia_ratingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:numStars">3</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_custom</item>
+        <item name="android:stepSize">1</item>
     </style>
 
 </resources>

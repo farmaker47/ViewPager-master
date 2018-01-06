@@ -49,7 +49,7 @@
     </string-array>
 
     <string name="textInfo">Βαθμολογείστε σε μία κλίμακα από το 1 μέχρι το 3 τι πιστεύετε ότι σας αφορά σχετικά με τα συμπτώματα που αναφέρονται πιο κάτω. Αν τα συμπτώματα είναι σπάνια (λιγότερο από 2-3 φορές το μήνα) βαθμολογείστε με 1. Αν πιο συχνά και πιο έντονα βαθμολογείστε με 2. Αν σχεδόν καθημερινά και πολύ έντονα βαθμολογείστε με 3. Ο Ορθομοριακός Διατροφικός Ειδικός σας θα αξιολογήσει την βαθμολογία και θα σας συστήσει το Ορθομοριακό Διατροφικό Πρόγραμμα που χρειάζεστε. Παρακαλούμε βαθμολογήστε το σύμπτωμα που σας αφορά.</string>
-    <string name="emailSubject">Ερωτηματολόγιο ΕυΖήν</string>
+    <string name="emailSubject">Ερωτηματολόγιο ΕΥ ΖΗΝ</string>
     <string name="title_activity_eu_zin_drawer">ΕΥ ΖΗΝ</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -100,4 +100,24 @@
     <string name="prosopikes_height">ΥΨΟΣ</string>
     <string name="prosopikes_elseInfo">ΑΛΛΑ ΣΤΟΙΧΕΙΑ</string>
     <string name="prosopikes_imerominia_text">ΗΜΕΡΟΜΗΝΙΑ</string>
+    <string name="ygeia_textnumber">1.  </string>
+    <string name="ygeia_textperigrafi_flegmones1">Πόνοι αρθρώσεων, πόνοι μυών, κράμπες, δυσκαμψία κινήσεων</string>
+    <string name="ygeia_textperigrafi_flegmones2">Έκζεμα, ψωρίαση, δερματοπάθειες γενικά</string>
+    <string name="ygeia_textperigrafi_flegmones3">Φαγούρα, εξανθήματα, ξηροδερμία</string>
+    <string name="ygeia_textperigrafi_flegmones4">Άσθμα, βρογχίτιδα</string>
+    <string name="ygeia_textperigrafi_flegmones5">Βήχας, ερεθισμένος λαιμός, βραχνάδα, απώλεια φωνής</string>
+    <string name="ygeia_textperigrafi_flegmones6">Αλλεργίες, τροφικές δυσανεξίες</string>
+    <string name="ygeia_textperigrafi_flegmones7">Κυστίτιδα ή άφθες</string>
+    <string name="ygeia_textperigrafi_flegmones8">Ρευματισμοί ή αρθρίτιδα</string>
+    <string name="ygeia_textperigrafi_flegmones9">Πόνοι στα γόνατα</string>
+    <string name="flegmones">Φλεγμονές</string>
+    <string name="gastrenteriki">Γαστρεντερική Λειτουργία</string>
+    <string name="ygeia_textperigrafi_gastrent1">Διαρροϊκό σύνδρομο, δυσκοιλιότητα, σπαστική κολίτιδα</string>
+    <string name="ygeia_textperigrafi_gastrent2">Ξινίλες ή καούρες, φουσκώματα, αέρια</string>
+    <string name="ygeia_textperigrafi_gastrent3">Άσχημη αναπνοή</string>
+    <string name="ygeia_textperigrafi_gastrent4">Έχετε συχνά στομαχικές διαταραχές</string>
+    <string name="ygeia_textperigrafi_gastrent5">Έχετε συχνά μια αίσθηση καψίματος στο στομάχι</string>
+    <string name="ygeia_textperigrafi_gastrent6">Έχετε δυσκολία στην πέψη λιπαρών τροφών, οσπρίων και λαχανικών</string>
+    <string name="ygeia_textperigrafi_gastrent7">\nΧρησιμοποιείτε συχνά φάρμακα που υποβοηθούν την πέψη</string>
+    <string name="ygeia_textperigrafi_gastrent8">Παίρνετε συχνά αντιβίωση</string>
 </resources>
