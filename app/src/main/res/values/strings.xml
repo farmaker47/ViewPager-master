@@ -81,6 +81,23 @@
     <string name="toast_while_wait">Επεξεργασία στοιχείων για αποστολή...</string>
     <string name="toast_end_pdf">Το .pdf αποθηκεύτηκε στη διαδρομή: /Εσωτερικός χώρος αποθήκευσης/EuZin</string>
     <string name="hello">Χαίρεται. Το όνομά μου είναι </string>
-    <string name="apostelo">και σας στέλνω το ερωτηματολόγιο.</string>
+    <string name="apostelo">και σας στέλνω το ερωτηματολόγιο. </string>
     <string name="parakalo">Παρακαλώ εικοινωνήστε μαζί μου στο e-mail ή στο τηλέφωνο. Ευχαριστώ!</string>
+    <string name="odigies_erot_head">Οδηγίες για το ερωτηματολόγιο</string>
+    <string name="drawer_content_eroti">ΕΡΩΤΗΜΑΤΟΛΟΓΙΟ</string>
+    <string name="prosopikes_epikefalis">ΠΡΟΣΩΠΙΚΑ  ΣΤΟΙΧΕΙΑ</string>
+    <string name="kato_epikefalis">Παρακαλώ εισάγετε τα στοιχεία σας ώστε να μας βοηθήσετε να επικοινωνήσουμε μαζί σας</string>
+    <string name="prosopikes_eponimo">ΕΠΩΝΥΜΟ</string>
+    <string name="prosopikes_onoma">ΟΝΟΜΑ</string>
+    <string name="prosopikes_address">ΔΙΕΥΘΥΝΣΗ</string>
+    <string name="prosopikes_perioxi">ΠΕΡΙΟΧΗ</string>
+    <string name="prosopikes_TK">ΤΚ</string>
+    <string name="prosopikes_phones">ΤΗΛΕΦΩΝΑ</string>
+    <string name="prosopikes_fax">ΦΑΞ/E-MAIL</string>
+    <string name="prosopikes_age">ΗΛΙΚΙΑ</string>
+    <string name="prosopikes_occupation">ΕΠΑΓΓΕΛΜΑ</string>
+    <string name="prosopikes_weight">ΒΑΡΟΣ</string>
+    <string name="prosopikes_height">ΥΨΟΣ</string>
+    <string name="prosopikes_elseInfo">ΑΛΛΑ ΣΤΟΙΧΕΙΑ</string>
+    <string name="prosopikes_imerominia_text">ΗΜΕΡΟΜΗΝΙΑ</string>
 </resources>

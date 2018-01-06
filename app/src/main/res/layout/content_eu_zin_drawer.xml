@@ -31,18 +31,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageIdato"
             android:layout_centerHorizontal="true"
-            android:text="ΕΡΩΤΗΜΑΤΟΛΟΓΙΟ"
+            android:text="@string/drawer_content_eroti"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageMainDrawer"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="@dimen/drawer_content_image_height"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="?attr/selectableItemBackgroundBorderless" />
     </RelativeLayout>
-
 
 </ScrollView>

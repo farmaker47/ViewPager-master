@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Οδηγίες για το ερωτηματολόγιο"
+        android:text="@string/odigies_erot_head"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -17,8 +17,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/view_magin"
+        android:layout_marginRight="@dimen/view_magin"
         android:background="#FF979395" />
 
     <ScrollView
@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/textview_odigies_margin"
             android:text="@string/odigiesforEuZin" />
     </ScrollView>
 </LinearLayout>

@@ -607,7 +607,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             Intent email = new Intent(Intent.ACTION_SEND);
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
-            email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello)+" "+ onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo)+
+            email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello)+" "+ onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo)+" "+
                     getResources().getString(R.string.parakalo));
             Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
                     .getAbsolutePath() + "/EuZin", "EuZin.pdf"));
