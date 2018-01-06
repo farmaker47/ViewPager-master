@@ -264,6 +264,9 @@
 
             </LinearLayout>
 
+            <!--
+                        //gastrenteriki
+            -->
             <TextView
                 style="@style/view_edit_header_for_item"
                 android:text="@string/gastrenteriki" />
@@ -315,8 +318,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -339,8 +341,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -351,7 +352,7 @@
 
                     <TextView
                         style="@style/ygeia_text_number"
-                        android:text="4.  "/>
+                        android:text="4.  " />
 
                     <TextView
                         style="@style/ygeia_textperigrafi"
@@ -363,8 +364,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -387,8 +387,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -411,8 +410,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -435,8 +433,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -447,7 +444,7 @@
 
                     <TextView
                         style="@style/ygeia_text_number"
-                        android:text="8.  "/>
+                        android:text="8.  " />
 
                     <TextView
                         style="@style/ygeia_textperigrafi"
@@ -459,8 +456,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            style="@style/ygeia_ratingBar"/>
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -473,17 +469,7 @@
             -->
             <TextView
                 style="@style/view_edit_header_for_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="Ικανότητα αποτοξίνωσης"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffff"
-                android:textSize="24sp" />
+                android:text="@string/apotojinosi" />
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/view_edit_for_item_onoma"
@@ -497,19 +483,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="1.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="1.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Μπουκωμένη μύτη, ιγμορίτιδα και ρινική καταρροή" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi1" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -517,13 +496,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -533,19 +506,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="2.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="2.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Μάτια που δακρύζουν ή τσούζουν" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi2" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -553,13 +519,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -569,19 +529,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="3.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="3.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Ακμή" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi3" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -589,13 +542,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -605,19 +552,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="4.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="4.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Πρησμένη αποχρωματισμένη γλώσσα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi4" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -625,13 +565,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -641,19 +575,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="5.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="5.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Παίρνετε συχνά φάρμακα." />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi5" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -661,13 +588,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -677,19 +598,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="6.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="6.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Καπνίζετε περισσότερα από 5 τσιγάρα την ημέρα, πίνετε αλκοόλ, αναψυκτικά." />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi6" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -697,13 +611,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -713,19 +621,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="7.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="7.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΚατοικείτε και εργάζεστε κοντά σε οδικές αρτηρίες, σε μεγάλη πόλη, τρώτε προϊόντα εντατικής καλλιέργειας με λιπάσματα και φυτοφάρμακα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi7" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -733,12 +634,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -748,19 +644,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="8.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="8.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Πονοκέφαλοι ή ημικρανίες" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi8" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -768,13 +657,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -784,19 +667,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="9.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="9.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Βλέφαρα πρησμένα, ερεθισμένα ή βλέφαρα που κολλάνε" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi9" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -804,13 +680,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -820,19 +690,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="10.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="10.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Αίσθημα αδυναμίας ή ατονίας" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi10" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -840,13 +703,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -856,19 +713,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="11.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="11.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Βαρύ και μπουκωμένο στήθος, λαχάνιασμα, δυσκολία στην αναπνοή" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi11" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -876,13 +726,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -892,19 +736,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="12.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="12.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Θολή ή μειωμένη περιμετρική όραση" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi12" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -912,13 +749,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -928,19 +759,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="13.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="13.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Φαγούρα, εξανθήματα, ξηρό δέρμα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi13" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -948,13 +772,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -964,19 +782,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="14.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="14.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Κοκκινίλες στο δέρμα ή/και συχνές ξαφνικές εξάψεις, υπερβολικός ιδρώτας" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_perigrafi_apotojinosi14" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -984,13 +795,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1011,17 +816,7 @@
 
             <TextView
                 style="@style/view_edit_header_for_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="Ορθομοριακές θρεπτικές ελλείψεις"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffff"
-                android:textSize="24sp" />
+                android:text="@string/orthomoriakesElleipseis" />
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/view_edit_for_item_onoma"
@@ -1035,19 +830,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="1.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="1.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Τριχόπτωση, ξηρά ή λιπαρά μαλλιά, πρόωρο γκριζάρισμα μαλλιών" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew1" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1055,13 +843,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1071,19 +853,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="2.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="2.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΚαθυστέρηση στην επούλωση πληγών, εύκολο μελάνιασμα δέρματος" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew2" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1091,13 +866,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1107,19 +876,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="3.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="3.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΣυχνά κρυολογήματα, ιώσεις και λοιμώξεις" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew3" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1127,13 +889,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1143,19 +899,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="4.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="4.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Μούδιασμα στα χέρια (σαν βελόνες)" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew4" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1163,13 +912,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1179,19 +922,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="5.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="5.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Υπέρταση, αρρυθμία, ταχυπαλμίες" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew5" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1199,13 +935,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1215,19 +945,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="6.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="6.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Ωχρότητα δέρματος, νωθρότητα, ανορεξία ή ναυτία" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew6" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1235,13 +958,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1251,19 +968,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="7.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="7.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΜειωμένη αίσθηση γεύσης ή όσφρησης, άσπρες κηλίδες σε περισσότερα από δύο νύχια, χαμηλή γονιμότητα, ραγάδες στο δέρμα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew7" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1271,12 +981,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1286,19 +991,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="8.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="8.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Κακή αίσθηση ισορροπίας" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew8" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1306,13 +1004,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1322,19 +1014,13 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="9.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="9.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΥπερβολική εφίδρωση ή κρύος ιδρώτας, βουλιμία, ανάγκη για συχνά τσιμπολογήματα, εθισμός στις γλυκές τροφές και την ζάχαρη, υπνηλία κατά την διάρκεια της ημέρας" />
+
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew9" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1342,13 +1028,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1358,19 +1038,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="10.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="10.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΧρειάζεστε το πρωί τονωτικό για να ξεκινήσετε την ημέρα σας, π.χ. τσιγάρο, καφέ" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew10" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1378,13 +1051,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1394,19 +1061,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="11.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="11.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΧρειάζεστε περισσότερο από 20 λεπτά για να σηκωθείτε αφότου ξυπνήσετε" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew11" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1414,13 +1074,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1430,19 +1084,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="12.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="12.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΑποφεύγετε να αθλείστε λόγω κούρασης, έχετε λιγότερη ενέργεια από ότι στο παρελθόν" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew12" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1450,13 +1097,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1466,19 +1107,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="13.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="13.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Κατάθλιψη, ανορεξία" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew13" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1486,13 +1120,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1502,19 +1130,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="14.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="14.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Αδύνατη νυκτερινή όραση" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew14" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1522,13 +1143,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1538,19 +1153,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="15.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="15.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Στοματικά έλκη, ακμή" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_orthomoriakew15" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1558,13 +1166,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1577,17 +1179,7 @@
             -->
             <TextView
                 style="@style/view_edit_header_for_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="Βιοχημικό Άγχος"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffff"
-                android:textSize="24sp" />
+                android:text="@string/vioximiko" />
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/view_edit_for_item_onoma"
@@ -1601,19 +1193,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="1.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="1.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Μειωμένη διάθεση για ερωτική επαφή ή ικανότητα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko1" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1621,13 +1206,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1637,19 +1216,13 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="2.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="2.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΕκνευρίζεστε συχνά ακόμα και όταν δεν υπάρχει σοβαρός λόγος" />
+
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko2" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1657,13 +1230,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1673,19 +1240,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="3.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="3.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΣας φοβίζει το μέλλον, μετανιώνετε για το παρελθόν" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko3" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1693,13 +1253,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1709,19 +1263,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="4.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="4.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΑρχίζετε 2-3 δουλειές ταυτόχρονα" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko4" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1729,13 +1276,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1745,19 +1286,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="5.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="5.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΥποφέρετε από αϋπνίες, μελαγχολία, κατάθλιψη, χρόνια κούραση, έλλειψη ενέργειας" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko5" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1765,13 +1299,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1781,19 +1309,13 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="6.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="6.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΑισθάνεστε ενοχές όταν χαλαρώνετε, έχετε επίμονη ανάγκη για επιτυχίες" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko6" />
+
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1801,13 +1323,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1817,19 +1333,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="7.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="7.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΑισθάνεστε συχνά την ανάγκη να κλάψετε" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko7" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1837,12 +1346,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1852,19 +1356,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="8.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="8.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΑισθάνεστε ότι απειλείστε αλλά δεν γνωρίζετε από πού, αισθάνεστε αποξένωση από το περιβάλλον, έχετε έμμονες σκέψεις" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko8" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1872,13 +1369,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1888,19 +1379,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="9.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="9.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΠάσχετε από αγοραφοβία ή φοβίες γενικά" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko9" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1908,13 +1392,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1924,19 +1402,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="10.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="10.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΞεχνάτε εύκολα, έχετε χαμηλή αυτοεκτίμηση" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko10" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1944,13 +1415,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1960,19 +1425,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="11.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="11.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΓίνεστε ανυπόμονοι όταν οι άνθρωποι ή οι καταστάσεις σας κάνουν να περιμένετε" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko11" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -1980,13 +1438,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1996,19 +1448,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="12.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="12.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="\nΈχετε συχνά αβεβαιότητα για το τι πρέπει να κάνετε" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_vioximiko12" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -2016,13 +1461,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -2034,17 +1473,7 @@
             -->
             <TextView
                 style="@style/view_edit_header_for_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="Ερωτήσεις για γυναίκες"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffff"
-                android:textSize="24sp" />
+                android:text="@string/woman" />
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/view_edit_for_item_onoma"
@@ -2058,19 +1487,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="1.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="1.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Μεγάλη αιμορραγία κατά την  περίοδο" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_Gynaikes1" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -2078,13 +1500,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -2094,19 +1510,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="2.  "
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        style="@style/ygeia_text_number"
+                        android:text="2.  " />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:text="Ακατάστατη περίοδος, προεμμηνορροϊκό σύνδρομο" />
+                        style="@style/ygeia_textperigrafi"
+                        android:text="@string/ygeia_Gynaikes2" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -2114,13 +1523,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1">
 
-                        <RatingBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:numStars="3"
-                            android:progressDrawable="@drawable/ratingbar_custom"
-                            android:stepSize="1" />
+                        <RatingBar style="@style/ygeia_ratingBar" />
 
                     </LinearLayout>
                 </LinearLayout>
