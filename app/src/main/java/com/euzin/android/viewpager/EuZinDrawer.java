@@ -1,4 +1,4 @@
-package com.example.android.viewpager;
+package com.euzin.android.viewpager;
 
 import android.content.Intent;
 import android.net.Uri;

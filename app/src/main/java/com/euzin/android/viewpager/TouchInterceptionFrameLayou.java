@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.viewpager;
+package com.euzin.android.viewpager;
 
 import android.annotation.TargetApi;
 import android.content.Context;

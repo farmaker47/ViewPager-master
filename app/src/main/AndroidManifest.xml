@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.viewpager">
+    package="com.euzin.android.viewpager">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -28,11 +28,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".FlexibleSpaceWithImageWithViewPagerTab2Activity"
+            android:name="com.euzin.android.viewpager.FlexibleSpaceWithImageWithViewPagerTab2Activity"
             android:windowSoftInputMode="adjustPan"
             android:configChanges="orientation|screenSize"></activity>
         <activity
-            android:name=".EuZinDrawer"
+            android:name="com.euzin.android.viewpager.EuZinDrawer"
             android:label="@string/title_activity_eu_zin_drawer"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -41,7 +41,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Odigies"></activity>
+        <activity android:name="com.euzin.android.viewpager.Odigies"></activity>
+
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>

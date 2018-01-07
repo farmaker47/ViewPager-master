@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.viewpager;
+package com.euzin.android.viewpager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,9 +21,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RatingBar;
 
 public class WednesdayFragment extends Fragment {
 

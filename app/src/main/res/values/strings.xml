@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">ViewPager</string>
+    <string name="app_name">ΕΥ ΖΗΝ</string>
     <string name="state_capital">Λιανική Τιμή Φαρμάκου:</string>
     <string name="erotimatologio">Questionaire</string>
 
@@ -69,7 +69,7 @@
     πληροφορίες στείλτε e-mail πατώντας το πράσινο κουμπί στην κεντρική οθόνη</string>
     <string name="drawer_header_info">Πληροφορίες</string>
     <string name="extra_mail_subject">Επικοινωνώ για να ζητήσω πληροφορίες σχετικά με το ερωτηματολόγιο και το κατάστημα ΕΥ ΖΗΝ Καλαμάτας</string>
-    <string name="tsekare_me_internet">Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας ---------</string>
+    <string name="tsekare_me_internet">Τσέκαρε την εφαρμογή για το κατάστημα Ευ Ζήν Καλαμάτας https://play.google.com/store/apps/details?id=com.euzin.android.viewpager</string>
     <string name="send_app_header_of_intent">Αποστολή εφαρμογής:</string>
     <string name="telephone_Pantelis">6945492375</string>
     <string name="telephone_Nick">6946496987</string>
@@ -187,4 +187,6 @@
     <string name="genikes_pasxoyn">Πάσχουν απο κάποια νοσήματα;</string>
     <string name="genikes_pateras">Κατάσταση υγείας πατέρα:</string>
     <string name="genikes_mana">Κατάσταση υγείας μητέρας:</string>
+    <string name="permissionsToast">Ενεργοποιήστε την αποθήκευση αρχείων για να προχωρήσετε στην αποστολή του αρχείου pdf στο εμφανιζόμενο πλαίσιο ή
+        στις ρυθμίσεις των εφαρμογών</string>
 </resources>

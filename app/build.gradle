@@ -1,15 +1,19 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "com.example.android.viewpager"
+        applicationId "com.euzin.android.viewpager"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 9
+        versionName "9.0"
+    }
+    lintOptions{
+        abortOnError false
     }
     buildTypes {
         release {
@@ -30,4 +34,10 @@ dependencies {
     
     compile files('libs/itextg-5.5.8.jar')
 
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+    compile 'com.google.firebase:firebase-core:11.8.0'
+
 }
+apply plugin: 'com.google.gms.google-services'

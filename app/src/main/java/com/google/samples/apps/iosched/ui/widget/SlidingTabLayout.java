@@ -18,7 +18,6 @@ package com.google.samples.apps.iosched.ui.widget;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -32,7 +31,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.android.viewpager.R;
+import com.euzin.android.viewpager.R;
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to

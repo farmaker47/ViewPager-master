@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-package com.example.android.viewpager;
+package com.euzin.android.viewpager;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -32,10 +34,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v4.content.Loader;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
@@ -379,8 +385,8 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
     }
 
     /**
-     * This adapter provides two types of fragments as an example.
-     * {@linkplain #createItem(int)} should be modified if you use this example for your app.
+     * This adapter provides two types of fragments as an com.george.euzin.
+     * {@linkplain #createItem(int)} should be modified if you use this com.george.euzin for your app.
      */
 
     private class NavigationAdapter extends CacheFragmentStatePagerAdapter {
@@ -389,7 +395,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         String health = getResources().getString(R.string.health);
         String info = getResources().getString(R.string.info);
 
-        private  final String[] TITLES = new String[]{genika, health, info};
+        private final String[] TITLES = new String[]{genika, health, info};
 
         public NavigationAdapter(FragmentManager fm) {
             super(fm);
@@ -432,6 +438,43 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
         public void onReceive(Context context, Intent intent) {
             String actionGet = intent.getAction();
             if (actionGet.equals(NUMBER_OF_RECEIVER)) {
+                /*LoaderManager loaderManager = getSupportLoaderManager();
+                Loader<String> githubSearchLoader = loaderManager.getLoader(MAIN_LOADER);
+                if (githubSearchLoader == null) {
+                    loaderManager.initLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                } else {
+                    loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                }*/
+                checkPermissionsForGranting();
+                Log.e("Intent", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT)) {
+
+                mPager.setCurrentItem(1);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES)) {
+
+                mPager.setCurrentItem(2);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK)) {
+
+                mPager.setCurrentItem(0);
+                Log.e("IntentNextPage", "Received");
+            } else if (actionGet.equals(NUMBER_OF_RECEIVER_MIDDLE_BACK)) {
+
+                mPager.setCurrentItem(1);
+                Log.e("IntentNextPage", "Received");
+            }
+        }
+    }
+
+    private void checkPermissionsForGranting() {
+        int MyVersion = Build.VERSION.SDK_INT;
+        if (MyVersion > Build.VERSION_CODES.JELLY_BEAN) {
+            if (!checkIfAlreadyhavePermission()) {
+                requestForSpecificPermission();
+                Log.e("Lollipop", "No");
+
+            }else{
                 LoaderManager loaderManager = getSupportLoaderManager();
                 Loader<String> githubSearchLoader = loaderManager.getLoader(MAIN_LOADER);
                 if (githubSearchLoader == null) {
@@ -439,24 +482,47 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
                 } else {
                     loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
                 }
-                Log.d("Intent", "Received");
-            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT)) {
+                Log.e("Lollipop", "Yes");
 
-                mPager.setCurrentItem(1);
-                Log.d("IntentNextPage", "Received");
-            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES)) {
-
-                mPager.setCurrentItem(2);
-                Log.d("IntentNextPage", "Received");
-            } else if (actionGet.equals(NUMBER_OF_RECEIVER_NEXT_GENIKES_BACK)) {
-
-                mPager.setCurrentItem(0);
-                Log.d("IntentNextPage", "Received");
-            } else if (actionGet.equals(NUMBER_OF_RECEIVER_MIDDLE_BACK)) {
-
-                mPager.setCurrentItem(1);
-                Log.d("IntentNextPage", "Received");
             }
+        }
+    }
+
+    //Check checkIfAlreadyhavePermission
+    private boolean checkIfAlreadyhavePermission() {
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestForSpecificPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case 101:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //granted
+                    LoaderManager loaderManager = getSupportLoaderManager();
+                    Loader<String> githubSearchLoader = loaderManager.getLoader(MAIN_LOADER);
+                    if (githubSearchLoader == null) {
+                        loaderManager.initLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                    } else {
+                        loaderManager.restartLoader(MAIN_LOADER, null, mLoaderToCreatePdf);
+                    }
+                } else {
+                    //not granted
+                    Toast.makeText(FlexibleSpaceWithImageWithViewPagerTab2Activity.this,getResources().getString(R.string.permissionsToast),Toast.LENGTH_LONG).show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 
@@ -478,6 +544,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
 
                 @Override
                 public Bitmap loadInBackground() {
+
                     try {
 
                         String path = Environment.getExternalStorageDirectory()
@@ -607,12 +674,15 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             Intent email = new Intent(Intent.ACTION_SEND);
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
-            email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello)+" "+ onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo)+" "+
+            email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello) + " " + onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo) + " " +
                     getResources().getString(R.string.parakalo));
-            Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
-                    .getAbsolutePath() + "/EuZin", "EuZin.pdf"));
+            /*Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory()
+                    .getAbsolutePath() + "/EuZin", "EuZin.pdf"));*/
+            Uri uri = FileProvider.getUriForFile(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, getApplicationContext().getPackageName() + ".my.package.name.provider",
+                    new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/EuZin", "EuZin.pdf"));
             email.putExtra(Intent.EXTRA_STREAM, uri);
-            email.setType("application/pdf");
+            email.setType("*/*");
+            email.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             email.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             if (email.resolveActivity(getPackageManager()) != null) {
                 startActivity(email);

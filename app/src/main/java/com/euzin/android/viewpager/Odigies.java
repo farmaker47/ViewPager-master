@@ -1,4 +1,4 @@
-package com.example.android.viewpager;
+package com.euzin.android.viewpager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
