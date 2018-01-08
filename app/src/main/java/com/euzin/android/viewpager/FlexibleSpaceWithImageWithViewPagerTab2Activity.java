@@ -672,6 +672,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             String onomaString = mOnoma.getText().toString();
 
             Intent email = new Intent(Intent.ACTION_SEND);
+            email.setData(Uri.parse("mailto:"));
             email.putExtra(Intent.EXTRA_EMAIL, new String[]{"ef-zin@hotmail.com"});
             email.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.emailSubject));
             email.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.hello) + " " + onomaString + " " + eponimoString + " " + getResources().getString(R.string.apostelo) + " " +
@@ -681,7 +682,7 @@ public class FlexibleSpaceWithImageWithViewPagerTab2Activity extends AppCompatAc
             Uri uri = FileProvider.getUriForFile(FlexibleSpaceWithImageWithViewPagerTab2Activity.this, getApplicationContext().getPackageName() + ".my.package.name.provider",
                     new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/EuZin", "EuZin.pdf"));
             email.putExtra(Intent.EXTRA_STREAM, uri);
-            email.setType("*/*");
+            email.setType("application/pdf");
             email.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             email.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             if (email.resolveActivity(getPackageManager()) != null) {
