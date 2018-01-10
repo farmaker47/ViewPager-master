@@ -130,7 +130,7 @@ public class EuZinDrawer extends AppCompatActivity
 
         } else if (id == R.id.nav_map) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("geo:37.039691,22.110437?z=18"));
+            intent.setData(Uri.parse("geo:37.039691,22.110437?z=20"));
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
